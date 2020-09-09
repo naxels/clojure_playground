@@ -1,0 +1,2583 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="eng">
+  <head>
+    <meta content="86c6bc0c-2257-48ba-8cbb-db6fc9178041" name="dtb:uid"/>
+    <meta content="4" name="dtb:depth"/>
+    <meta content="calibre (4.7.0)" name="dtb:generator"/>
+    <meta content="0" name="dtb:totalPageCount"/>
+    <meta content="0" name="dtb:maxPageNumber"/>
+  </head>
+  <docTitle>
+    <text>Clojure: The Essential Reference MEAP V30</text>
+  </docTitle>
+  <navMap>
+    <navPoint class="chapter" id="navPoint-1" playOrder="1">
+      <navLabel>
+        <text>MEAP VERSION 30</text>
+      </navLabel>
+      <content src="OEBPS/Text/title.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-2" playOrder="2">
+      <navLabel>
+        <text>About this MEAP</text>
+      </navLabel>
+      <content src="OEBPS/Text/instructions.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-3" playOrder="3">
+      <navLabel>
+        <text>Welcome</text>
+      </navLabel>
+      <content src="OEBPS/Text/wl.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-4" playOrder="4">
+      <navLabel>
+        <text>Brief Table of Contents</text>
+      </navLabel>
+      <content src="OEBPS/Text/navDisplay.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-5" playOrder="5">
+      <navLabel>
+        <text>Part 1. Introduction</text>
+      </navLabel>
+      <content src="OEBPS/Text/p1.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-6" playOrder="6">
+      <navLabel>
+        <text>1 Know Your Tools</text>
+      </navLabel>
+      <content src="OEBPS/Text/01.html"/>
+      <navPoint class="chapter" id="navPoint-7" playOrder="7">
+        <navLabel>
+          <text>1.1 Why should I care about the Standard Library?</text>
+        </navLabel>
+        <content src="OEBPS/Text/01.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-8" playOrder="8">
+        <navLabel>
+          <text>1.2 Aren’t specifications just plain boring?</text>
+        </navLabel>
+        <content src="OEBPS/Text/01.html#heading_id_4"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-9" playOrder="9">
+        <navLabel>
+          <text>1.3 The different versions of Clojure</text>
+        </navLabel>
+        <content src="OEBPS/Text/01.html#heading_id_5"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-10" playOrder="10">
+        <navLabel>
+          <text>1.4 The Clojure Standard Library</text>
+        </navLabel>
+        <content src="OEBPS/Text/01.html#heading_id_6"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-11" playOrder="11">
+        <navLabel>
+          <text>1.5 Making Your Development Life Easier</text>
+        </navLabel>
+        <content src="OEBPS/Text/01.html#heading_id_7"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-12" playOrder="12">
+        <navLabel>
+          <text>1.6 The problem of fragmented information</text>
+        </navLabel>
+        <content src="OEBPS/Text/01.html#heading_id_8"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-13" playOrder="13">
+        <navLabel>
+          <text>1.7 The well kept secret of the Clojure Ninja</text>
+        </navLabel>
+        <content src="OEBPS/Text/01.html#heading_id_9"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-14" playOrder="14">
+        <navLabel>
+          <text>1.8 The perfect companion book</text>
+        </navLabel>
+        <content src="OEBPS/Text/01.html#heading_id_10"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-15" playOrder="15">
+        <navLabel>
+          <text>1.9 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/01.html#heading_id_11"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-16" playOrder="16">
+      <navLabel>
+        <text>Part 2. Fundamentals</text>
+      </navLabel>
+      <content src="OEBPS/Text/p2.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-17" playOrder="17">
+      <navLabel>
+        <text>2 Creating and manipulating functions</text>
+      </navLabel>
+      <content src="OEBPS/Text/02.html"/>
+      <navPoint class="chapter" id="navPoint-18" playOrder="18">
+        <navLabel>
+          <text>2.1 Function definition</text>
+        </navLabel>
+        <content src="OEBPS/Text/02.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-19" playOrder="19">
+          <navLabel>
+            <text>2.1.1 defn and defn-</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_4"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-20" playOrder="20">
+          <navLabel>
+            <text>2.1.2 fn</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_14"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-21" playOrder="21">
+          <navLabel>
+            <text>2.1.3 fn*</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_23"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-22" playOrder="22">
+        <navLabel>
+          <text>2.2 Higher order functions</text>
+        </navLabel>
+        <content src="OEBPS/Text/02.html#heading_id_30"/>
+        <navPoint class="chapter" id="navPoint-23" playOrder="23">
+          <navLabel>
+            <text>2.2.1 fnil</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_31"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-24" playOrder="24">
+          <navLabel>
+            <text>2.2.2 comp</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_39"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-25" playOrder="25">
+          <navLabel>
+            <text>2.2.3 complement</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_49"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-26" playOrder="26">
+          <navLabel>
+            <text>2.2.4 constantly</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_59"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-27" playOrder="27">
+          <navLabel>
+            <text>2.2.5 identity</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_70"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-28" playOrder="28">
+          <navLabel>
+            <text>2.2.6 juxt</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_80"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-29" playOrder="29">
+          <navLabel>
+            <text>2.2.7 memfn</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_92"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-30" playOrder="30">
+          <navLabel>
+            <text>2.2.8 partial</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_103"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-31" playOrder="31">
+          <navLabel>
+            <text>2.2.9 every-pred and some-fn</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_111"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-32" playOrder="32">
+        <navLabel>
+          <text>2.3 Threading macros</text>
+        </navLabel>
+        <content src="OEBPS/Text/02.html#heading_id_125"/>
+        <navPoint class="chapter" id="navPoint-33" playOrder="33">
+          <navLabel>
+            <text>2.3.1 -&gt;</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_126"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-34" playOrder="34">
+          <navLabel>
+            <text>2.3.2 -&gt;&gt;</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_137"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-35" playOrder="35">
+          <navLabel>
+            <text>2.3.3 cond-&gt; and cond-&gt;&gt;</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_147"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-36" playOrder="36">
+          <navLabel>
+            <text>2.3.4 some-&gt; and some-&gt;&gt;</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_157"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-37" playOrder="37">
+          <navLabel>
+            <text>2.3.5 as-&gt;</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_169"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-38" playOrder="38">
+        <navLabel>
+          <text>2.4 Function execution</text>
+        </navLabel>
+        <content src="OEBPS/Text/02.html#heading_id_180"/>
+        <navPoint class="chapter" id="navPoint-39" playOrder="39">
+          <navLabel>
+            <text>2.4.1 apply</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_181"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-40" playOrder="40">
+          <navLabel>
+            <text>2.4.2 memoize</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_193"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-41" playOrder="41">
+          <navLabel>
+            <text>2.4.3 trampoline</text>
+          </navLabel>
+          <content src="OEBPS/Text/02.html#heading_id_206"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-42" playOrder="42">
+        <navLabel>
+          <text>2.5 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/02.html#heading_id_217"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-43" playOrder="43">
+      <navLabel>
+        <text>3 Basic Constructs</text>
+      </navLabel>
+      <content src="OEBPS/Text/03.html"/>
+      <navPoint class="chapter" id="navPoint-44" playOrder="44">
+        <navLabel>
+          <text>3.1 Lexical Binding</text>
+        </navLabel>
+        <content src="OEBPS/Text/03.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-45" playOrder="45">
+          <navLabel>
+            <text>3.1.1 let and let*</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_4"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-46" playOrder="46">
+          <navLabel>
+            <text>3.1.2 if-let, when-let, if-some and when-some</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_14"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-47" playOrder="47">
+          <navLabel>
+            <text>3.1.3 letfn and letfn*</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_21"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-48" playOrder="48">
+        <navLabel>
+          <text>3.2 Boolean and Bitwise Operators</text>
+        </navLabel>
+        <content src="OEBPS/Text/03.html#heading_id_30"/>
+        <navPoint class="chapter" id="navPoint-49" playOrder="49">
+          <navLabel>
+            <text>3.2.1 not</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_31"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-50" playOrder="50">
+          <navLabel>
+            <text>3.2.2 and, or</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_41"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-51" playOrder="51">
+          <navLabel>
+            <text>3.2.3 bit-and and bit-or</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_49"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-52" playOrder="52">
+          <navLabel>
+            <text>3.2.4 bit-and</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_57"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-53" playOrder="53">
+          <navLabel>
+            <text>3.2.5 bit-set</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_58"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-54" playOrder="54">
+        <navLabel>
+          <text>3.3 Conditional Branching</text>
+        </navLabel>
+        <content src="OEBPS/Text/03.html#heading_id_68"/>
+        <navPoint class="chapter" id="navPoint-55" playOrder="55">
+          <navLabel>
+            <text>3.3.1 if, if-not, when and when-not</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_69"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-56" playOrder="56">
+          <navLabel>
+            <text>3.3.2 cond</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_78"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-57" playOrder="57">
+          <navLabel>
+            <text>3.3.3 condp</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_89"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-58" playOrder="58">
+          <navLabel>
+            <text>3.3.4 case</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_100"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-59" playOrder="59">
+        <navLabel>
+          <text>3.4 Iteration and loops</text>
+        </navLabel>
+        <content src="OEBPS/Text/03.html#heading_id_111"/>
+        <navPoint class="chapter" id="navPoint-60" playOrder="60">
+          <navLabel>
+            <text>3.4.1 loop, recur and loop*</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_112"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-61" playOrder="61">
+          <navLabel>
+            <text>3.4.2 range</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_122"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-62" playOrder="62">
+          <navLabel>
+            <text>3.4.3 for</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_134"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-63" playOrder="63">
+          <navLabel>
+            <text>3.4.4 while</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_143"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-64" playOrder="64">
+          <navLabel>
+            <text>3.4.5 dotimes</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_153"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-65" playOrder="65">
+        <navLabel>
+          <text>3.5 A Glimpse of Collection Processing</text>
+        </navLabel>
+        <content src="OEBPS/Text/03.html#heading_id_162"/>
+        <navPoint class="chapter" id="navPoint-66" playOrder="66">
+          <navLabel>
+            <text>3.5.1 first, second and last</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_163"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-67" playOrder="67">
+          <navLabel>
+            <text>3.5.2 map and map-indexed</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_175"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-68" playOrder="68">
+          <navLabel>
+            <text>3.5.3 filter and remove</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_183"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-69" playOrder="69">
+          <navLabel>
+            <text>3.5.4 reduce and reductions</text>
+          </navLabel>
+          <content src="OEBPS/Text/03.html#heading_id_191"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-70" playOrder="70">
+        <navLabel>
+          <text>3.6 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/03.html#heading_id_202"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-71" playOrder="71">
+      <navLabel>
+        <text>4 Creating and inspecting macros</text>
+      </navLabel>
+      <content src="OEBPS/Text/04.html"/>
+      <navPoint class="chapter" id="navPoint-72" playOrder="72">
+        <navLabel>
+          <text>4.1 defmacro</text>
+        </navLabel>
+        <content src="OEBPS/Text/04.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-73" playOrder="73">
+          <navLabel>
+            <text>4.1.1 Syntax Quote</text>
+          </navLabel>
+          <content src="OEBPS/Text/04.html#heading_id_9"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-74" playOrder="74">
+          <navLabel>
+            <text>4.1.2 &amp;form</text>
+          </navLabel>
+          <content src="OEBPS/Text/04.html#heading_id_10"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-75" playOrder="75">
+          <navLabel>
+            <text>4.1.3 &amp;env</text>
+          </navLabel>
+          <content src="OEBPS/Text/04.html#heading_id_11"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-76" playOrder="76">
+        <navLabel>
+          <text>4.2 macroexpand, macroexpand-1 and macroexpand-all</text>
+        </navLabel>
+        <content src="OEBPS/Text/04.html#heading_id_15"/>
+        <navPoint class="chapter" id="navPoint-77" playOrder="77">
+          <navLabel>
+            <text>4.2.1 Shotcomings</text>
+          </navLabel>
+          <content src="OEBPS/Text/04.html#heading_id_22"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-78" playOrder="78">
+        <navLabel>
+          <text>4.3 quote</text>
+        </navLabel>
+        <content src="OEBPS/Text/04.html#heading_id_24"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-79" playOrder="79">
+        <navLabel>
+          <text>4.4 gensym</text>
+        </navLabel>
+        <content src="OEBPS/Text/04.html#heading_id_33"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-80" playOrder="80">
+        <navLabel>
+          <text>4.5 definline</text>
+        </navLabel>
+        <content src="OEBPS/Text/04.html#heading_id_43"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-81" playOrder="81">
+        <navLabel>
+          <text>4.6 destructure</text>
+        </navLabel>
+        <content src="OEBPS/Text/04.html#heading_id_51"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-82" playOrder="82">
+        <navLabel>
+          <text>4.7 clojure.template/apply-template</text>
+        </navLabel>
+        <content src="OEBPS/Text/04.html#heading_id_61"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-83" playOrder="83">
+        <navLabel>
+          <text>4.8 clojure.template/do-template</text>
+        </navLabel>
+        <content src="OEBPS/Text/04.html#heading_id_71"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-84" playOrder="84">
+        <navLabel>
+          <text>4.9 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/04.html#heading_id_82"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-85" playOrder="85">
+      <navLabel>
+        <text>5 Operations on Numbers</text>
+      </navLabel>
+      <content src="OEBPS/Text/05.html"/>
+      <navPoint class="chapter" id="navPoint-86" playOrder="86">
+        <navLabel>
+          <text>5.1 Overview</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-87" playOrder="87">
+        <navLabel>
+          <text>5.2 Arbitrary precision</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_4"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-88" playOrder="88">
+        <navLabel>
+          <text>5.3 Roll-over Precision</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_5"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-89" playOrder="89">
+        <navLabel>
+          <text>5.4 +, -, * and /</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_6"/>
+        <navPoint class="chapter" id="navPoint-90" playOrder="90">
+          <navLabel>
+            <text>5.4.1 Other special cases</text>
+          </navLabel>
+          <content src="OEBPS/Text/05.html#heading_id_10"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-91" playOrder="91">
+          <navLabel>
+            <text>5.4.2 Precision</text>
+          </navLabel>
+          <content src="OEBPS/Text/05.html#heading_id_12"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-92" playOrder="92">
+        <navLabel>
+          <text>5.5 inc and dec</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_16"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-93" playOrder="93">
+        <navLabel>
+          <text>5.6 quot, rem and mod</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_24"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-94" playOrder="94">
+        <navLabel>
+          <text>5.7 max and min</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_35"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-95" playOrder="95">
+        <navLabel>
+          <text>5.8 max-key and min-key</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_47"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-96" playOrder="96">
+        <navLabel>
+          <text>5.9 rand and rand-int</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_58"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-97" playOrder="97">
+        <navLabel>
+          <text>5.10 with-precision</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_68"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-98" playOrder="98">
+        <navLabel>
+          <text>5.11 +', -', *', inc' and dec'</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_76"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-99" playOrder="99">
+        <navLabel>
+          <text>5.12 unchecked-add and other unchecked operators</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_84"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-100" playOrder="100">
+        <navLabel>
+          <text>5.13 unchecked-add-int and other unckecked-int operators</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_94"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-101" playOrder="101">
+        <navLabel>
+          <text>5.14 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/05.html#heading_id_104"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-102" playOrder="102">
+      <navLabel>
+        <text>6 Comparison and Equality</text>
+      </navLabel>
+      <content src="OEBPS/Text/06.html"/>
+      <navPoint class="chapter" id="navPoint-103" playOrder="103">
+        <navLabel>
+          <text>6.1 = (equal) and not= (not equal)</text>
+        </navLabel>
+        <content src="OEBPS/Text/06.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-104" playOrder="104">
+        <navLabel>
+          <text>6.2 = (double equal)</text>
+        </navLabel>
+        <content src="OEBPS/Text/06.html#heading_id_14"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-105" playOrder="105">
+        <navLabel>
+          <text>6.3 &lt; , &gt; , &lt;= , &gt;=</text>
+        </navLabel>
+        <content src="OEBPS/Text/06.html#heading_id_26"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-106" playOrder="106">
+        <navLabel>
+          <text>6.4 compare</text>
+        </navLabel>
+        <content src="OEBPS/Text/06.html#heading_id_38"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-107" playOrder="107">
+        <navLabel>
+          <text>6.5 identical?</text>
+        </navLabel>
+        <content src="OEBPS/Text/06.html#heading_id_49"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-108" playOrder="108">
+        <navLabel>
+          <text>6.6 hash</text>
+        </navLabel>
+        <content src="OEBPS/Text/06.html#heading_id_60"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-109" playOrder="109">
+        <navLabel>
+          <text>6.7 clojure.data/diff</text>
+        </navLabel>
+        <content src="OEBPS/Text/06.html#heading_id_70"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-110" playOrder="110">
+        <navLabel>
+          <text>6.8 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/06.html#heading_id_81"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-111" playOrder="111">
+      <navLabel>
+        <text>7 Reducers and Transducers</text>
+      </navLabel>
+      <content src="OEBPS/Text/07.html"/>
+      <navPoint class="chapter" id="navPoint-112" playOrder="112">
+        <navLabel>
+          <text>7.1 Reducers</text>
+        </navLabel>
+        <content src="OEBPS/Text/07.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-113" playOrder="113">
+          <navLabel>
+            <text>7.1.1 fold</text>
+          </navLabel>
+          <content src="OEBPS/Text/07.html#heading_id_4"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-114" playOrder="114">
+          <navLabel>
+            <text>7.1.2 reducer and folder</text>
+          </navLabel>
+          <content src="OEBPS/Text/07.html#heading_id_15"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-115" playOrder="115">
+          <navLabel>
+            <text>7.1.3 monoid</text>
+          </navLabel>
+          <content src="OEBPS/Text/07.html#heading_id_25"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-116" playOrder="116">
+          <navLabel>
+            <text>7.1.4 foldcat, cat and append!</text>
+          </navLabel>
+          <content src="OEBPS/Text/07.html#heading_id_36"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-117" playOrder="117">
+        <navLabel>
+          <text>7.2 Transducers</text>
+        </navLabel>
+        <content src="OEBPS/Text/07.html#heading_id_46"/>
+        <navPoint class="chapter" id="navPoint-118" playOrder="118">
+          <navLabel>
+            <text>7.2.1 transduce</text>
+          </navLabel>
+          <content src="OEBPS/Text/07.html#heading_id_47"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-119" playOrder="119">
+          <navLabel>
+            <text>7.2.2 eduction</text>
+          </navLabel>
+          <content src="OEBPS/Text/07.html#heading_id_58"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-120" playOrder="120">
+          <navLabel>
+            <text>7.2.3 completing</text>
+          </navLabel>
+          <content src="OEBPS/Text/07.html#heading_id_69"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-121" playOrder="121">
+          <navLabel>
+            <text>7.2.4 cat</text>
+          </navLabel>
+          <content src="OEBPS/Text/07.html#heading_id_79"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-122" playOrder="122">
+        <navLabel>
+          <text>7.3 reduced, reduced?, ensure-reduced, unreduced</text>
+        </navLabel>
+        <content src="OEBPS/Text/07.html#heading_id_90"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-123" playOrder="123">
+        <navLabel>
+          <text>7.4 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/07.html#heading_id_100"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-124" playOrder="124">
+      <navLabel>
+        <text>Part 3. Data Structures</text>
+      </navLabel>
+      <content src="OEBPS/Text/p3.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-125" playOrder="125">
+      <navLabel>
+        <text>8 Collections</text>
+      </navLabel>
+      <content src="OEBPS/Text/08.html"/>
+      <navPoint class="chapter" id="navPoint-126" playOrder="126">
+        <navLabel>
+          <text>8.1 Basics</text>
+        </navLabel>
+        <content src="OEBPS/Text/08.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-127" playOrder="127">
+          <navLabel>
+            <text>8.1.1 into</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_4"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-128" playOrder="128">
+          <navLabel>
+            <text>8.1.2 count</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_15"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-129" playOrder="129">
+          <navLabel>
+            <text>8.1.3 nth</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_27"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-130" playOrder="130">
+          <navLabel>
+            <text>8.1.4 empty</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_39"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-131" playOrder="131">
+          <navLabel>
+            <text>8.1.5 every?, not-every?, some and not-any?</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_50"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-132" playOrder="132">
+          <navLabel>
+            <text>8.1.6 some</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_58"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-133" playOrder="133">
+          <navLabel>
+            <text>8.1.7 empty? and not-empty</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_62"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-134" playOrder="134">
+        <navLabel>
+          <text>8.2 Polymorphic</text>
+        </navLabel>
+        <content src="OEBPS/Text/08.html#heading_id_73"/>
+        <navPoint class="chapter" id="navPoint-135" playOrder="135">
+          <navLabel>
+            <text>8.2.1 conj</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_74"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-136" playOrder="136">
+          <navLabel>
+            <text>8.2.2 get</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_86"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-137" playOrder="137">
+          <navLabel>
+            <text>8.2.3 contains?</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_98"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-138" playOrder="138">
+        <navLabel>
+          <text>8.3 General purpose</text>
+        </navLabel>
+        <content src="OEBPS/Text/08.html#heading_id_110"/>
+        <navPoint class="chapter" id="navPoint-139" playOrder="139">
+          <navLabel>
+            <text>8.3.1 rand-nth</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_111"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-140" playOrder="140">
+          <navLabel>
+            <text>8.3.2 shuffle</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_123"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-141" playOrder="141">
+          <navLabel>
+            <text>8.3.3 random-sample</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_134"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-142" playOrder="142">
+          <navLabel>
+            <text>8.3.4 frequencies</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_146"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-143" playOrder="143">
+          <navLabel>
+            <text>8.3.5 sort and sort-by</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_157"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-144" playOrder="144">
+          <navLabel>
+            <text>8.3.6 group-by</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_169"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-145" playOrder="145">
+          <navLabel>
+            <text>8.3.7 replace</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_180"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-146" playOrder="146">
+          <navLabel>
+            <text>8.3.8 reverse</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_191"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-147" playOrder="147">
+        <navLabel>
+          <text>8.4 Traversing</text>
+        </navLabel>
+        <content src="OEBPS/Text/08.html#heading_id_202"/>
+        <navPoint class="chapter" id="navPoint-148" playOrder="148">
+          <navLabel>
+            <text>8.4.1 walk, prewalk-demo and postwalk-demo</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_203"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-149" playOrder="149">
+          <navLabel>
+            <text>8.4.2 prewalk and postwalk</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_206"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-150" playOrder="150">
+          <navLabel>
+            <text>8.4.3 prewalk-replace and postwalk-replace</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_218"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-151" playOrder="151">
+          <navLabel>
+            <text>8.4.4 clojure.zip</text>
+          </navLabel>
+          <content src="OEBPS/Text/08.html#heading_id_220"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-152" playOrder="152">
+        <navLabel>
+          <text>8.5 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/08.html#heading_id_224"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-153" playOrder="153">
+      <navLabel>
+        <text>9 Sequences</text>
+      </navLabel>
+      <content src="OEBPS/Text/09.html"/>
+      <navPoint class="chapter" id="navPoint-154" playOrder="154">
+        <navLabel>
+          <text>9.1 Sequential Collections</text>
+        </navLabel>
+        <content src="OEBPS/Text/09.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-155" playOrder="155">
+          <navLabel>
+            <text>9.1.1 seq and sequence</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_4"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-156" playOrder="156">
+          <navLabel>
+            <text>9.1.2 rseq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_16"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-157" playOrder="157">
+          <navLabel>
+            <text>9.1.3 subseq and rsubseq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_29"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-158" playOrder="158">
+          <navLabel>
+            <text>9.1.4 seque</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_42"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-159" playOrder="159">
+          <navLabel>
+            <text>9.1.5 pmap, pcalls and pvalues</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_53"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-160" playOrder="160">
+        <navLabel>
+          <text>9.2 Abstract Generators</text>
+        </navLabel>
+        <content src="OEBPS/Text/09.html#heading_id_63"/>
+        <navPoint class="chapter" id="navPoint-161" playOrder="161">
+          <navLabel>
+            <text>9.2.1 repeatedly</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_64"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-162" playOrder="162">
+          <navLabel>
+            <text>9.2.2 iterate</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_76"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-163" playOrder="163">
+          <navLabel>
+            <text>9.2.3 repeat and cycle</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_88"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-164" playOrder="164">
+        <navLabel>
+          <text>9.3 Other Generators</text>
+        </navLabel>
+        <content src="OEBPS/Text/09.html#heading_id_100"/>
+        <navPoint class="chapter" id="navPoint-165" playOrder="165">
+          <navLabel>
+            <text>9.3.1 lazy-seq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_101"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-166" playOrder="166">
+          <navLabel>
+            <text>9.3.2 tree-seq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_113"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-167" playOrder="167">
+          <navLabel>
+            <text>9.3.3 file-seq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_125"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-168" playOrder="168">
+          <navLabel>
+            <text>9.3.4 xml-seq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_137"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-169" playOrder="169">
+          <navLabel>
+            <text>9.3.5 re-seq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_148"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-170" playOrder="170">
+          <navLabel>
+            <text>9.3.6 line-seq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_160"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-171" playOrder="171">
+          <navLabel>
+            <text>9.3.7 resultset-seq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_172"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-172" playOrder="172">
+          <navLabel>
+            <text>9.3.8 iterator-seq and enumeration-seq</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_184"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-173" playOrder="173">
+          <navLabel>
+            <text>9.3.9 concat and lazy-cat</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_196"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-174" playOrder="174">
+        <navLabel>
+          <text>9.4 Lists</text>
+        </navLabel>
+        <content src="OEBPS/Text/09.html#heading_id_208"/>
+        <navPoint class="chapter" id="navPoint-175" playOrder="175">
+          <navLabel>
+            <text>9.4.1 list</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_209"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-176" playOrder="176">
+          <navLabel>
+            <text>9.4.2 cons and list</text>
+          </navLabel>
+          <content src="OEBPS/Text/09.html#heading_id_220"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-177" playOrder="177">
+        <navLabel>
+          <text>9.5 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/09.html#heading_id_232"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-178" playOrder="178">
+      <navLabel>
+        <text>10 Sequential Processing</text>
+      </navLabel>
+      <content src="OEBPS/Text/10.html"/>
+      <navPoint class="chapter" id="navPoint-179" playOrder="179">
+        <navLabel>
+          <text>10.1 rest, next, fnext, nnext, ffirst, nfirst and butlast</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-180" playOrder="180">
+        <navLabel>
+          <text>10.2 drop, drop-while, drop-last, take, take-while, take-last, nthrest, nthnext</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_14"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-181" playOrder="181">
+        <navLabel>
+          <text>10.3 keep and keep-indexed</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_25"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-182" playOrder="182">
+        <navLabel>
+          <text>10.4 mapcat</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_37"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-183" playOrder="183">
+        <navLabel>
+          <text>10.5 interpose and interleave</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_49"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-184" playOrder="184">
+        <navLabel>
+          <text>10.6 partition, partition-all and partition-by</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_60"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-185" playOrder="185">
+        <navLabel>
+          <text>10.7 flatten</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_71"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-186" playOrder="186">
+        <navLabel>
+          <text>10.8 distinct, dedupe and distinct?</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_82"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-187" playOrder="187">
+        <navLabel>
+          <text>10.9 take-nth</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_94"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-188" playOrder="188">
+        <navLabel>
+          <text>10.10 split-at and split-with</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_106"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-189" playOrder="189">
+        <navLabel>
+          <text>10.11 when-first</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_118"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-190" playOrder="190">
+        <navLabel>
+          <text>10.12 chunk-cons, chunk-first, chunk-rest, chunk-next, chunk-buffer, chunk-append and chunk</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_129"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-191" playOrder="191">
+        <navLabel>
+          <text>10.13 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/10.html#heading_id_141"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-192" playOrder="192">
+      <navLabel>
+        <text>11 Maps</text>
+      </navLabel>
+      <content src="OEBPS/Text/11.html"/>
+      <navPoint class="chapter" id="navPoint-193" playOrder="193">
+        <navLabel>
+          <text>11.1 Creating</text>
+        </navLabel>
+        <content src="OEBPS/Text/11.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-194" playOrder="194">
+          <navLabel>
+            <text>11.1.1 hash-map</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_4"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-195" playOrder="195">
+          <navLabel>
+            <text>11.1.2 array-map</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_16"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-196" playOrder="196">
+          <navLabel>
+            <text>11.1.3 sorted-map and sorted-map-by</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_28"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-197" playOrder="197">
+          <navLabel>
+            <text>11.1.4 create-struct, defstruct, struct-map, struct and accessor</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_39"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-198" playOrder="198">
+          <navLabel>
+            <text>11.1.5 zipmap</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_50"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-199" playOrder="199">
+        <navLabel>
+          <text>11.2 Accessing</text>
+        </navLabel>
+        <content src="OEBPS/Text/11.html#heading_id_61"/>
+        <navPoint class="chapter" id="navPoint-200" playOrder="200">
+          <navLabel>
+            <text>11.2.1 keys and vals</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_62"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-201" playOrder="201">
+          <navLabel>
+            <text>11.2.2 find, key and val</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_72"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-202" playOrder="202">
+          <navLabel>
+            <text>11.2.3 select-keys and get-in</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_83"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-203" playOrder="203">
+        <navLabel>
+          <text>11.3 Processing</text>
+        </navLabel>
+        <content src="OEBPS/Text/11.html#heading_id_94"/>
+        <navPoint class="chapter" id="navPoint-204" playOrder="204">
+          <navLabel>
+            <text>11.3.1 assoc, assoc-in and dissoc</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_95"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-205" playOrder="205">
+          <navLabel>
+            <text>11.3.2 update and update-in</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_109"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-206" playOrder="206">
+          <navLabel>
+            <text>11.3.3 merge and merge-with</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_121"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-207" playOrder="207">
+          <navLabel>
+            <text>11.3.4 reduce-kv</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_132"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-208" playOrder="208">
+        <navLabel>
+          <text>11.4 Utility functions</text>
+        </navLabel>
+        <content src="OEBPS/Text/11.html#heading_id_143"/>
+        <navPoint class="chapter" id="navPoint-209" playOrder="209">
+          <navLabel>
+            <text>11.4.1 clojure.walk/keywordize-keys and clojure.walk/stringify-keys</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_144"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-210" playOrder="210">
+          <navLabel>
+            <text>11.4.2 clojure.set/rename-keys</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_145"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-211" playOrder="211">
+          <navLabel>
+            <text>11.4.3 clojure.set/map-invert</text>
+          </navLabel>
+          <content src="OEBPS/Text/11.html#heading_id_146"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-212" playOrder="212">
+        <navLabel>
+          <text>11.5 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/11.html#heading_id_147"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-213" playOrder="213">
+      <navLabel>
+        <text>12 Vectors</text>
+      </navLabel>
+      <content src="OEBPS/Text/12.html"/>
+      <navPoint class="chapter" id="navPoint-214" playOrder="214">
+        <navLabel>
+          <text>12.1 Functions that operate on vectors</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-215" playOrder="215">
+        <navLabel>
+          <text>12.2 The four types of vectors</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_4"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-216" playOrder="216">
+        <navLabel>
+          <text>12.3 vector</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_5"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-217" playOrder="217">
+        <navLabel>
+          <text>12.4 vec</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_16"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-218" playOrder="218">
+        <navLabel>
+          <text>12.5 peek and pop</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_28"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-219" playOrder="219">
+        <navLabel>
+          <text>12.6 vector-of</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_39"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-220" playOrder="220">
+        <navLabel>
+          <text>12.7 mapv</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_51"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-221" playOrder="221">
+        <navLabel>
+          <text>12.8 filterv</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_62"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-222" playOrder="222">
+        <navLabel>
+          <text>12.9 subvec</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_72"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-223" playOrder="223">
+        <navLabel>
+          <text>12.10 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/12.html#heading_id_83"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-224" playOrder="224">
+      <navLabel>
+        <text>13 Sets</text>
+      </navLabel>
+      <content src="OEBPS/Text/13.html"/>
+      <navPoint class="chapter" id="navPoint-225" playOrder="225">
+        <navLabel>
+          <text>13.1 hash-set</text>
+        </navLabel>
+        <content src="OEBPS/Text/13.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-226" playOrder="226">
+        <navLabel>
+          <text>13.2 set</text>
+        </navLabel>
+        <content src="OEBPS/Text/13.html#heading_id_14"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-227" playOrder="227">
+        <navLabel>
+          <text>13.3 sorted-set and sorted-set-by</text>
+        </navLabel>
+        <content src="OEBPS/Text/13.html#heading_id_25"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-228" playOrder="228">
+        <navLabel>
+          <text>13.4 disj</text>
+        </navLabel>
+        <content src="OEBPS/Text/13.html#heading_id_36"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-229" playOrder="229">
+        <navLabel>
+          <text>13.5 union, difference and intersection</text>
+        </navLabel>
+        <content src="OEBPS/Text/13.html#heading_id_49"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-230" playOrder="230">
+        <navLabel>
+          <text>13.6 subset? and superset?</text>
+        </navLabel>
+        <content src="OEBPS/Text/13.html#heading_id_60"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-231" playOrder="231">
+        <navLabel>
+          <text>13.7 select, index, rename, join and project</text>
+        </navLabel>
+        <content src="OEBPS/Text/13.html#heading_id_62"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-232" playOrder="232">
+        <navLabel>
+          <text>13.8 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/13.html#heading_id_64"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-233" playOrder="233">
+      <navLabel>
+        <text>Part 4. Solving Specific Problems</text>
+      </navLabel>
+      <content src="OEBPS/Text/p4.html"/>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-234" playOrder="234">
+      <navLabel>
+        <text>14 Concurrency</text>
+      </navLabel>
+      <content src="OEBPS/Text/14.html"/>
+      <navPoint class="chapter" id="navPoint-235" playOrder="235">
+        <navLabel>
+          <text>14.1 future</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-236" playOrder="236">
+          <navLabel>
+            <text>14.1.1 future-done? and future?</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_4"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-237" playOrder="237">
+          <navLabel>
+            <text>14.1.2 future-cancel and future-cancelled?</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_5"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-238" playOrder="238">
+          <navLabel>
+            <text>14.1.3 future-call</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_6"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-239" playOrder="239">
+        <navLabel>
+          <text>14.2 promise and deliver</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_7"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-240" playOrder="240">
+        <navLabel>
+          <text>14.3 delay</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_8"/>
+        <navPoint class="chapter" id="navPoint-241" playOrder="241">
+          <navLabel>
+            <text>14.3.1 delay? and force</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_9"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-244" playOrder="244">
+        <navLabel>
+          <text>14.4 ref</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_12"/>
+        <navPoint class="chapter" id="navPoint-245" playOrder="245">
+          <navLabel>
+            <text>14.4.1 ref-history-count, ref-min-history, ref-max-history</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_13"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-246" playOrder="246">
+          <navLabel>
+            <text>14.4.2 alter and ref-set</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_14"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-247" playOrder="247">
+        <navLabel>
+          <text>14.5 atom</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_20"/>
+        <navPoint class="chapter" id="navPoint-248" playOrder="248">
+          <navLabel>
+            <text>14.5.1 swap!</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_21"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-249" playOrder="249">
+          <navLabel>
+            <text>14.5.2 reset!</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_22"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-250" playOrder="250">
+          <navLabel>
+            <text>14.5.3 compare-and-set!</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_23"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-251" playOrder="251">
+        <navLabel>
+          <text>14.6 agent</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_24"/>
+        <navPoint class="chapter" id="navPoint-252" playOrder="252">
+          <navLabel>
+            <text>14.6.1 send</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_25"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-253" playOrder="253">
+          <navLabel>
+            <text>14.6.2 await</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_26"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-254" playOrder="254">
+          <navLabel>
+            <text>14.6.3 await-for</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_27"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-255" playOrder="255">
+          <navLabel>
+            <text>14.6.4 send-off</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_28"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-256" playOrder="256">
+          <navLabel>
+            <text>14.6.5 Controlling thread pools</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_29"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-257" playOrder="257">
+          <navLabel>
+            <text>14.6.6 send-via</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_30"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-258" playOrder="258">
+          <navLabel>
+            <text>14.6.7 Set agent send-off executor!</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_31"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-259" playOrder="259">
+          <navLabel>
+            <text>14.6.8 Set agent send executor!</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_32"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-260" playOrder="260">
+          <navLabel>
+            <text>14.6.9 release-pending-sends</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_33"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-261" playOrder="261">
+          <navLabel>
+            <text>14.6.10 Handling Errors</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_34"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-262" playOrder="262">
+          <navLabel>
+            <text>14.6.11 agent-error</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_35"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-263" playOrder="263">
+          <navLabel>
+            <text>14.6.12 restart-agent</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_36"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-264" playOrder="264">
+          <navLabel>
+            <text>14.6.13 set-error-handler!</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_37"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-265" playOrder="265">
+        <navLabel>
+          <text>14.7 deref and realized?</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_38"/>
+        <navPoint class="chapter" id="navPoint-266" playOrder="266">
+          <navLabel>
+            <text>14.7.1 realized?</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_39"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-267" playOrder="267">
+        <navLabel>
+          <text>14.8 set-validator! and get-validator</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_40"/>
+        <navPoint class="chapter" id="navPoint-268" playOrder="268">
+          <navLabel>
+            <text>14.8.1 get-validator</text>
+          </navLabel>
+          <content src="OEBPS/Text/14.html#heading_id_41"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-269" playOrder="269">
+        <navLabel>
+          <text>14.9 add-watch and remove-watch</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_42"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-270" playOrder="270">
+        <navLabel>
+          <text>14.10 locking, monitor-enter and monitor-exit</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_43"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-271" playOrder="271">
+        <navLabel>
+          <text>14.11 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/14.html#heading_id_44"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-272" playOrder="272">
+      <navLabel>
+        <text>15 Types, Classes, Hierarchies and Polymorphism</text>
+      </navLabel>
+      <content src="OEBPS/Text/15.html"/>
+      <navPoint class="chapter" id="navPoint-273" playOrder="273">
+        <navLabel>
+          <text>15.1 symbol and keyword</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-274" playOrder="274">
+          <navLabel>
+            <text>15.1.1 name</text>
+          </navLabel>
+          <content src="OEBPS/Text/15.html#heading_id_4"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-275" playOrder="275">
+        <navLabel>
+          <text>15.2 type checking</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_6"/>
+        <navPoint class="chapter" id="navPoint-276" playOrder="276">
+          <navLabel>
+            <text>15.2.1 type, instance? and class</text>
+          </navLabel>
+          <content src="OEBPS/Text/15.html#heading_id_7"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-277" playOrder="277">
+          <navLabel>
+            <text>15.2.2 instance?</text>
+          </navLabel>
+          <content src="OEBPS/Text/15.html#heading_id_8"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-278" playOrder="278">
+        <navLabel>
+          <text>15.3 gen-class and gen-interface</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_9"/>
+        <navPoint class="chapter" id="navPoint-279" playOrder="279">
+          <navLabel>
+            <text>15.3.1 gen-interface</text>
+          </navLabel>
+          <content src="OEBPS/Text/15.html#heading_id_10"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-280" playOrder="280">
+        <navLabel>
+          <text>15.4 deftype and definterface</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_11"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-281" playOrder="281">
+        <navLabel>
+          <text>15.5 proxy</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_12"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-282" playOrder="282">
+        <navLabel>
+          <text>15.6 reify</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_13"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-283" playOrder="283">
+        <navLabel>
+          <text>15.7 defrecord</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_14"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-284" playOrder="284">
+        <navLabel>
+          <text>15.8 defprotocol</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_15"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-285" playOrder="285">
+        <navLabel>
+          <text>15.9 extend, extend-type and extend-protocol</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_16"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-286" playOrder="286">
+        <navLabel>
+          <text>15.10 derive and make-hierarchy</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_17"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-287" playOrder="287">
+        <navLabel>
+          <text>15.11 defmulti and defmethod</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_18"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-288" playOrder="288">
+        <navLabel>
+          <text>15.12 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/15.html#heading_id_19"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-289" playOrder="289">
+      <navLabel>
+        <text>16 Vars and Namespaces</text>
+      </navLabel>
+      <content src="OEBPS/Text/16.html"/>
+      <navPoint class="chapter" id="navPoint-290" playOrder="290">
+        <navLabel>
+          <text>16.1 Namespaces</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-291" playOrder="291">
+        <navLabel>
+          <text>16.2 Libraries</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_4"/>
+        <navPoint class="chapter" id="navPoint-292" playOrder="292">
+          <navLabel>
+            <text>16.2.1 Vars and Bindings</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_5"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-293" playOrder="293">
+        <navLabel>
+          <text>16.3 def, declare, intern and defonce</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_6"/>
+        <navPoint class="chapter" id="navPoint-294" playOrder="294">
+          <navLabel>
+            <text>16.3.1 def</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_7"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-295" playOrder="295">
+          <navLabel>
+            <text>16.3.2 declare</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_8"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-296" playOrder="296">
+          <navLabel>
+            <text>16.3.3 intern</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_9"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-297" playOrder="297">
+          <navLabel>
+            <text>16.3.4 defonce</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_10"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-298" playOrder="298">
+        <navLabel>
+          <text>16.4 var, find-var and resolve</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_11"/>
+        <navPoint class="chapter" id="navPoint-299" playOrder="299">
+          <navLabel>
+            <text>16.4.1 var</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_12"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-300" playOrder="300">
+          <navLabel>
+            <text>16.4.2 find-var</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_13"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-301" playOrder="301">
+          <navLabel>
+            <text>16.4.3 resolve and ns-resolve</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_14"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-302" playOrder="302">
+          <navLabel>
+            <text>resolve</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_15"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-303" playOrder="303">
+          <navLabel>
+            <text>ns-resolve</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_16"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-304" playOrder="304">
+          <navLabel>
+            <text>16.4.4 clojure.repl/dir-fn and clojure.repl/dir</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_17"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-305" playOrder="305">
+          <navLabel>
+            <text>16.4.5 bound? and thread-bound?</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_18"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-306" playOrder="306">
+        <navLabel>
+          <text>16.5 alter-var-root and with-redefs</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_19"/>
+        <navPoint class="chapter" id="navPoint-307" playOrder="307">
+          <navLabel>
+            <text>16.5.1 alter-var-root</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_20"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-308" playOrder="308">
+          <navLabel>
+            <text>16.5.2 with-redefs and with-redefs-fn</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_21"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-309" playOrder="309">
+        <navLabel>
+          <text>16.6 binding</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_22"/>
+        <navPoint class="chapter" id="navPoint-310" playOrder="310">
+          <navLabel>
+            <text>16.6.1 bound-fn</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_23"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-311" playOrder="311">
+        <navLabel>
+          <text>16.7 with-local-vars, var-get and var-set</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_24"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-312" playOrder="312">
+        <navLabel>
+          <text>16.8 ns, in-ns, create-ns and remove-ns</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_25"/>
+        <navPoint class="chapter" id="navPoint-313" playOrder="313">
+          <navLabel>
+            <text>16.8.1 create-ns</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_26"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-314" playOrder="314">
+          <navLabel>
+            <text>16.8.2 remove-ns</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_27"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-315" playOrder="315">
+        <navLabel>
+          <text>16.9 alias, ns-aliases and ns-unalias</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_28"/>
+        <navPoint class="chapter" id="navPoint-316" playOrder="316">
+          <navLabel>
+            <text>16.9.1 ns-unalias</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_29"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-317" playOrder="317">
+        <navLabel>
+          <text>16.10 ns-map and ns-unmap</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_30"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-318" playOrder="318">
+        <navLabel>
+          <text>16.11 ns-publics, ns-interns, ns-imports</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_31"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-319" playOrder="319">
+        <navLabel>
+          <text>16.12 refer, refer-clojure, require, loaded-libs, use, import</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_32"/>
+        <navPoint class="chapter" id="navPoint-320" playOrder="320">
+          <navLabel>
+            <text>16.12.1 refer</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_33"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-321" playOrder="321">
+          <navLabel>
+            <text>16.12.2 require</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_34"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-322" playOrder="322">
+          <navLabel>
+            <text>16.12.3 loaded-libs</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_35"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-323" playOrder="323">
+        <navLabel>
+          <text>16.13 find-ns and all-ns</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_38"/>
+        <navPoint class="chapter" id="navPoint-324" playOrder="324">
+          <navLabel>
+            <text>16.13.1 find-ns</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_39"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-325" playOrder="325">
+        <navLabel>
+          <text>16.14 the-ns, ns-name and namespace</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_40"/>
+        <navPoint class="chapter" id="navPoint-326" playOrder="326">
+          <navLabel>
+            <text>16.14.1 ns-name</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_41"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-327" playOrder="327">
+          <navLabel>
+            <text>16.14.2 namespace</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_42"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-328" playOrder="328">
+        <navLabel>
+          <text>16.15 meta, with-meta, vary-meta, alter-meta! and reset-meta!</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_43"/>
+        <navPoint class="chapter" id="navPoint-329" playOrder="329">
+          <navLabel>
+            <text>16.15.1 with-meta</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_44"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-330" playOrder="330">
+          <navLabel>
+            <text>16.15.2 vary-meta</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_45"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-331" playOrder="331">
+          <navLabel>
+            <text>16.15.3 alter_meta!</text>
+          </navLabel>
+          <content src="OEBPS/Text/16.html#heading_id_46"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-332" playOrder="332">
+        <navLabel>
+          <text>16.16 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/16.html#heading_id_48"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-333" playOrder="333">
+      <navLabel>
+        <text>17 Evaluation</text>
+      </navLabel>
+      <content src="OEBPS/Text/17.html"/>
+      <navPoint class="chapter" id="navPoint-334" playOrder="334">
+        <navLabel>
+          <text>17.1 read and read-string</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-335" playOrder="335">
+          <navLabel>
+            <text>17.1.1 read</text>
+          </navLabel>
+          <content src="OEBPS/Text/17.html#heading_id_19"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-336" playOrder="336">
+          <navLabel>
+            <text>17.1.2 read-string</text>
+          </navLabel>
+          <content src="OEBPS/Text/17.html#heading_id_4"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-337" playOrder="337">
+        <navLabel>
+          <text>17.2 eval</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_5"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-338" playOrder="338">
+        <navLabel>
+          <text>17.3 load, load-file, load-reader and load-string</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_6"/>
+        <navPoint class="chapter" id="navPoint-339" playOrder="339">
+          <navLabel>
+            <text>17.3.1 load</text>
+          </navLabel>
+          <content src="OEBPS/Text/17.html#heading_id_7"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-340" playOrder="340">
+          <navLabel>
+            <text>17.3.2 load-file</text>
+          </navLabel>
+          <content src="OEBPS/Text/17.html#heading_id_8"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-341" playOrder="341">
+          <navLabel>
+            <text>17.3.3 load-string</text>
+          </navLabel>
+          <content src="OEBPS/Text/17.html#heading_id_9"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-342" playOrder="342">
+          <navLabel>
+            <text>17.3.4 load-reader</text>
+          </navLabel>
+          <content src="OEBPS/Text/17.html#heading_id_10"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-343" playOrder="343">
+        <navLabel>
+          <text>17.4 compile</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_11"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-344" playOrder="344">
+        <navLabel>
+          <text>17.5 test and assert</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_12"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-345" playOrder="345">
+        <navLabel>
+          <text>17.6 clojure.edn/read and clojure.edn/read-string</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_13"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-346" playOrder="346">
+        <navLabel>
+          <text>17.7 tagged-literal and tagged-literal?</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_14"/>
+        <navPoint class="chapter" id="navPoint-347" playOrder="347">
+          <navLabel>
+            <text>17.7.1 tagged_literal?</text>
+          </navLabel>
+          <content src="OEBPS/Text/17.html#heading_id_15"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-348" playOrder="348">
+        <navLabel>
+          <text>17.8 default-data-readers</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_16"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-349" playOrder="349">
+        <navLabel>
+          <text>17.9 reader-conditional and reader-conditional?</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_17"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-350" playOrder="350">
+        <navLabel>
+          <text>17.10 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/17.html#heading_id_18"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-351" playOrder="351">
+      <navLabel>
+        <text>18 Formatting and Printing</text>
+      </navLabel>
+      <content src="OEBPS/Text/18.html"/>
+      <navPoint class="chapter" id="navPoint-352" playOrder="352">
+        <navLabel>
+          <text>18.1 format, printf and cl-format</text>
+        </navLabel>
+        <content src="OEBPS/Text/18.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-353" playOrder="353">
+        <navLabel>
+          <text>18.2 pr, prn, pr-str, prn-str, print, println, print-str, println-str</text>
+        </navLabel>
+        <content src="OEBPS/Text/18.html#heading_id_4"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-354" playOrder="354">
+        <navLabel>
+          <text>18.3 pprint, pp, write and print-table</text>
+        </navLabel>
+        <content src="OEBPS/Text/18.html#heading_id_5"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-355" playOrder="355">
+        <navLabel>
+          <text>18.4 print-method, print-dup and print-ctor</text>
+        </navLabel>
+        <content src="OEBPS/Text/18.html#heading_id_6"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-356" playOrder="356">
+        <navLabel>
+          <text>18.5 slurp and spit</text>
+        </navLabel>
+        <content src="OEBPS/Text/18.html#heading_id_7"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-357" playOrder="357">
+        <navLabel>
+          <text>18.6 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/18.html#heading_id_8"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-358" playOrder="358">
+      <navLabel>
+        <text>19 Strings and Regular Expressions</text>
+      </navLabel>
+      <content src="OEBPS/Text/19.html"/>
+      <navPoint class="chapter" id="navPoint-359" playOrder="359">
+        <navLabel>
+          <text>19.1 str</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-360" playOrder="360">
+        <navLabel>
+          <text>19.2 join</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_4"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-361" playOrder="361">
+        <navLabel>
+          <text>19.3 replace, replace-first, re-quote-replacement</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_5"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-362" playOrder="362">
+        <navLabel>
+          <text>19.4 subs, split and split-lines</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_6"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-363" playOrder="363">
+        <navLabel>
+          <text>19.5 trim, triml, trimr, trim-newline</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_7"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-364" playOrder="364">
+        <navLabel>
+          <text>19.6 escape, char-name-string, char-escape-string</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_8"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-365" playOrder="365">
+        <navLabel>
+          <text>19.7 lower-case, upper-case, capitalize</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_9"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-366" playOrder="366">
+        <navLabel>
+          <text>19.8 index-of, last-index-of</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_10"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-367" playOrder="367">
+        <navLabel>
+          <text>19.9 blank?, ends-with?, starts-with?, includes?</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_11"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-368" playOrder="368">
+        <navLabel>
+          <text>19.10 re-pattern, re-matcher, re-groups, re-seq, re-matches, re-find</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_12"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-369" playOrder="369">
+        <navLabel>
+          <text>19.11 Summary</text>
+        </navLabel>
+        <content src="OEBPS/Text/19.html#heading_id_13"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-370" playOrder="370">
+      <navLabel>
+        <text>20 Mutation and Side Effects</text>
+      </navLabel>
+      <content src="OEBPS/Text/20.html"/>
+      <navPoint class="chapter" id="navPoint-371" playOrder="371">
+        <navLabel>
+          <text>20.1 transient, persistent!, conj!, pop!, assoc!, dissoc! and disj!</text>
+        </navLabel>
+        <content src="OEBPS/Text/20.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-372" playOrder="372">
+        <navLabel>
+          <text>20.2 doseq, dorun, run!, doall, do</text>
+        </navLabel>
+        <content src="OEBPS/Text/20.html#heading_id_4"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-373" playOrder="373">
+        <navLabel>
+          <text>20.3 volatile!, vreset!, vswap! and volatile?</text>
+        </navLabel>
+        <content src="OEBPS/Text/20.html#heading_id_5"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-374" playOrder="374">
+        <navLabel>
+          <text>20.4 set!</text>
+        </navLabel>
+        <content src="OEBPS/Text/20.html#heading_id_6"/>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-375" playOrder="375">
+      <navLabel>
+        <text>21 Java Interoperation</text>
+      </navLabel>
+      <content src="OEBPS/Text/21.html"/>
+      <navPoint class="chapter" id="navPoint-376" playOrder="376">
+        <navLabel>
+          <text>21.1 ".", ".." and doto</text>
+        </navLabel>
+        <content src="OEBPS/Text/21.html#heading_id_3"/>
+        <navPoint class="chapter" id="navPoint-377" playOrder="377">
+          <navLabel>
+            <text>21.1.1 doto</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_4"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-378" playOrder="378">
+        <navLabel>
+          <text>21.2 new</text>
+        </navLabel>
+        <content src="OEBPS/Text/21.html#heading_id_5"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-379" playOrder="379">
+        <navLabel>
+          <text>21.3 try, catch, finally and throw</text>
+        </navLabel>
+        <content src="OEBPS/Text/21.html#heading_id_6"/>
+        <navPoint class="chapter" id="navPoint-380" playOrder="380">
+          <navLabel>
+            <text>21.3.1 throw</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_7"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-381" playOrder="381">
+          <navLabel>
+            <text>21.3.2 finally</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_8"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-382" playOrder="382">
+        <navLabel>
+          <text>21.4 ex-info and ex-data</text>
+        </navLabel>
+        <content src="OEBPS/Text/21.html#heading_id_9"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-383" playOrder="383">
+        <navLabel>
+          <text>21.5 bean</text>
+        </navLabel>
+        <content src="OEBPS/Text/21.html#heading_id_10"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-384" playOrder="384">
+        <navLabel>
+          <text>21.6 reflect and type-reflect</text>
+        </navLabel>
+        <content src="OEBPS/Text/21.html#heading_id_11"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-385" playOrder="385">
+        <navLabel>
+          <text>21.7 Java Arrays</text>
+        </navLabel>
+        <content src="OEBPS/Text/21.html#heading_id_12"/>
+        <navPoint class="chapter" id="navPoint-386" playOrder="386">
+          <navLabel>
+            <text>21.7.1 make-array</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_13"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-387" playOrder="387">
+          <navLabel>
+            <text>21.7.2 object-array and other typed initializers</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_14"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-388" playOrder="388">
+          <navLabel>
+            <text>21.7.3 to-array, into-array, to-array-2d</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_15"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-389" playOrder="389">
+          <navLabel>
+            <text>21.7.4 aget, aset, alength and aclone</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_18"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-390" playOrder="390">
+          <navLabel>
+            <text>21.7.5 amap and areduce</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_22"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-391" playOrder="391">
+          <navLabel>
+            <text>21.7.6 aset-int and other types setters</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_24"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-392" playOrder="392">
+          <navLabel>
+            <text>21.7.7 ints and other typed array casting</text>
+          </navLabel>
+          <content src="OEBPS/Text/21.html#heading_id_25"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+    <navPoint class="chapter" id="navPoint-393" playOrder="393">
+      <navLabel>
+        <text>22 The Toolbox</text>
+      </navLabel>
+      <content src="OEBPS/Text/22.html"/>
+      <navPoint class="chapter" id="navPoint-394" playOrder="394">
+        <navLabel>
+          <text>22.1 clojure.xml</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_3"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-395" playOrder="395">
+        <navLabel>
+          <text>22.2 clojure.inspector</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_4"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-396" playOrder="396">
+        <navLabel>
+          <text>22.3 clojure.repl</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_5"/>
+        <navPoint class="chapter" id="navPoint-397" playOrder="397">
+          <navLabel>
+            <text>22.3.1 doc</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_6"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-398" playOrder="398">
+          <navLabel>
+            <text>22.3.2 find-doc</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_7"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-399" playOrder="399">
+          <navLabel>
+            <text>22.3.3 apropos</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_8"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-400" playOrder="400">
+          <navLabel>
+            <text>22.3.4 dir</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_9"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-401" playOrder="401">
+          <navLabel>
+            <text>22.3.5 dir-fn</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_10"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-402" playOrder="402">
+        <navLabel>
+          <text>22.4 clojure.main</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_19"/>
+        <navPoint class="chapter" id="navPoint-403" playOrder="403">
+          <navLabel>
+            <text>22.4.1 load-script</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_20"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-404" playOrder="404">
+          <navLabel>
+            <text>22.4.2 repl</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_21"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-405" playOrder="405">
+        <navLabel>
+          <text>22.5 clojure.java.browse</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_22"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-406" playOrder="406">
+        <navLabel>
+          <text>22.6 clojure.java.shell</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_23"/>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-407" playOrder="407">
+        <navLabel>
+          <text>22.7 clojure.core.server</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_24"/>
+        <navPoint class="chapter" id="navPoint-408" playOrder="408">
+          <navLabel>
+            <text>22.7.1 stop-server</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_25"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-409" playOrder="409">
+        <navLabel>
+          <text>22.8 clojure.java.io</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_26"/>
+        <navPoint class="chapter" id="navPoint-410" playOrder="410">
+          <navLabel>
+            <text>22.8.1 Streams, Writers and Readers</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_27"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-411" playOrder="411">
+          <navLabel>
+            <text>22.8.2 Dealing with Files</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_34"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-412" playOrder="412">
+        <navLabel>
+          <text>22.9 clojure.test</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_40"/>
+        <navPoint class="chapter" id="navPoint-413" playOrder="413">
+          <navLabel>
+            <text>22.9.1 Creating tests</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_41"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-414" playOrder="414">
+          <navLabel>
+            <text>22.9.2 deftest</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_42"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-415" playOrder="415">
+          <navLabel>
+            <text>22.9.3 with-test</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_43"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-416" playOrder="416">
+          <navLabel>
+            <text>22.9.4 Assertion Language</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_44"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-417" playOrder="417">
+          <navLabel>
+            <text>22.9.5 is</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_45"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-418" playOrder="418">
+          <navLabel>
+            <text>22.9.6 testing</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_46"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-419" playOrder="419">
+          <navLabel>
+            <text>22.9.7 are</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_47"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-420" playOrder="420">
+          <navLabel>
+            <text>22.9.8 Creating custom predicates</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_48"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-421" playOrder="421">
+          <navLabel>
+            <text>22.9.10 Running Tests</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_49"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-422" playOrder="422">
+          <navLabel>
+            <text>22.9.11 test-var</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_50"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-423" playOrder="423">
+          <navLabel>
+            <text>22.9.12 test-all-vars</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_51"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-424" playOrder="424">
+          <navLabel>
+            <text>22.9.13 test-ns</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_52"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-425" playOrder="425">
+          <navLabel>
+            <text>22.9.14 run-tests</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_53"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-426" playOrder="426">
+          <navLabel>
+            <text>22.9.15 run-all-tests</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_54"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-427" playOrder="427">
+          <navLabel>
+            <text>22.9.16 Fixtures</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_55"/>
+        </navPoint>
+        <navPoint class="chapter" id="navPoint-428" playOrder="428">
+          <navLabel>
+            <text>22.9.17 use-fixtures</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_56"/>
+        </navPoint>
+      </navPoint>
+      <navPoint class="chapter" id="navPoint-429" playOrder="429">
+        <navLabel>
+          <text>22.10 clojure.java.javadoc</text>
+        </navLabel>
+        <content src="OEBPS/Text/22.html#heading_id_57"/>
+        <navPoint class="chapter" id="navPoint-430" playOrder="430">
+          <navLabel>
+            <text>22.10.1 javadoc</text>
+          </navLabel>
+          <content src="OEBPS/Text/22.html#heading_id_58"/>
+        </navPoint>
+      </navPoint>
+    </navPoint>
+  </navMap>
+</ncx>
