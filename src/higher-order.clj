@@ -16,6 +16,18 @@
  {}
  [:a :b :c :d :e])
 
+(def repos [{:private true}{:private true}{:private false}])
+
+; great example on reducing over a map, updating values for keys
+(reduce-kv (fn [m _index repo]
+             (let [key (if (:private repo)
+                         :private
+                         :public)]
+               (update m key inc)))
+           {:public 0
+            :private 0}
+           repos)
+
 (defn count-occurrences [coll]
   (->> coll
        (map #(vector % 1)) ; turn each item into vector with a 1
