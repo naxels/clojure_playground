@@ -64,6 +64,9 @@
        (into {} [[:a 1] [:b 2]])
        (into {} [{:a 1} {:b 2}])))
 
+; sort a map
+(into (sorted-map) {:c 1 :a 1 :b 1})
+
 ; map turns data structures into seq, with an into (empty coll) you can turn it back to what it was:
 (defn maintain-datastructure [f pred coll]
   (into (empty coll) (f pred coll)))
