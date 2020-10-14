@@ -9,6 +9,10 @@
       {:keys [name city]} (apply hash-map extra-info)] ; turn extra-info into a map
   (format "%s is in %s" name city))
 
+; making it even shorter by destructuring the & right away
+(let [[_username _account-year & {:keys [name city]}] user-info]
+  (format "%s is in %s" name city))
+
 ; map with subtree
 ; https://purelyfunctional.tv/issues/purelyfunctional-tv-newsletter-371-chain-map-filter-and-reduce/
 (def hospital
