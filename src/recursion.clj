@@ -105,3 +105,15 @@
 ;;  [3 5]
 ;;  [5 8]
 ;;  [8 13])
+
+; defn has an explicit do form
+; anonymous functions don't
+
+(defn countdown
+  [x]
+  (if (zero? x)
+    :blastoff!
+    (do (println x)
+        (recur (dec x)))))
+
+(countdown 5)
