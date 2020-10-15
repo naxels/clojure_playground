@@ -80,3 +80,24 @@
 ; advanced
 (let [[a _ _ _ [x y z :as nested] :as all] my-nested-vector] ; you can have multiple :as for subsections
   (println a x y z nested all))
+
+; vs anonymous function
+(fn [x & rest]
+  (- x (apply + rest)))
+
+#(- % (apply + %&))
+
+; :or and keyword arguments
+(defn make-user
+  "return a map"
+  [username & {:keys [email join-date]
+               :or {join-date (java.util.Date.)}}]
+  {:username username
+   :join-date join-date
+   :email email
+   ; 2.592e9 -> one month in ms
+   :exp-date (java.util.Date. (long (+ 2.592e9 (.getTime join-date))))})
+
+(make-user "Bobby")
+(make-user "Bobby" :join-date (java.util.Date. 111 0 1))
+(make-user "Bobby" :join-date (java.util.Date. 111 0 1) :email "bobby@example.com")
