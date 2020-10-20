@@ -1,5 +1,6 @@
 (ns functions-returning-functions
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer [is]]
+            [clojure.string :as str]))
 
 ;; partial
 (defn my-square [arg1 arg2]
@@ -19,6 +20,26 @@
 ; (def ccat-and-reverse (comp (partial apply str) reverse str))
 
 (is (= 10 (my-square-and-add1 1))) ; (+ 1 'arg') -> (my-square 5 'result')
+
+(def camel->keyword-comp (comp keyword
+                               str/join
+                               (partial interpose \-)
+                               (partial map str/lower-case)
+                               #(str/split % #"(?<=[a-z])(?=[A-Z])")))
+
+(is (= :camel-case (camel->keyword-comp "CamelCase")))
+
+; same example with ->>
+(defn camel->keyword
+  [s]
+  (->>
+   (str/split s #"(?<=[a-z])(?=[A-Z])")
+   (map str/lower-case)
+   (interpose \-)
+   str/join
+   keyword))
+
+(is (= :camel-case (camel->keyword "CamelCase")))
 
 ;; juxt
 ; Takes a set of functions and returns a fn that is the juxtaposition
