@@ -16,3 +16,5 @@ false
 
 ; easy replace by:
 (or (:armor target) 0)
+
+; see/treat functions as values

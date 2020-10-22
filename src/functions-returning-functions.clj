@@ -2,6 +2,8 @@
   (:require [clojure.test :refer [is]]
             [clojure.string :as str]))
 
+; you really have to see functions as values..
+
 ;; partial
 (defn my-square [arg1 arg2]
   (* arg1 arg2))
@@ -87,3 +89,20 @@
 ; (-> a
     ; b
     ; c)
+
+;; functions that returns a function
+(defn adder
+  [n]
+  (fn [x] (+ n x)))
+
+; (adder 5) ; result is function
+((adder 5) 18) ; now gives output
+
+(defn doubler
+  [f]
+  (fn [& args]
+    (* 2 (apply f args))))
+
+(def double-+ (doubler +)) ; again returns a function, now assigned to variable
+
+(double-+ 1 2 3) ; and now the result
