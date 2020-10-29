@@ -48,6 +48,12 @@
 
 (reduce (fn [_m i] {i 1}) {} (range 10)) ; if you don't use the previous value, you will overwrite until done
 
+; reductions - helps visualizing the reduce process as it returns the intermediate steps
+(reductions + [1 2 3 4 5])
+(reductions conj [] [1 2 3 4 5])
+(reductions + (map #(* % %) (range 5))) ; from 0->5, double the number, add them up
+(reduce + (map #(* % %) (range 5))) ; will return just the 30
+
 ;; apply ; applies all items in coll as argument
 (def strings-vec ["string1" "string2" "bla"])
 
