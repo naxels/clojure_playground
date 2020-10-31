@@ -1,4 +1,5 @@
-(ns destructure)
+(ns destructure
+  (:require [clojure.string]))
 
 ;; https://clojure.org/guides/destructuring
 
@@ -101,3 +102,11 @@
 (make-user "Bobby")
 (make-user "Bobby" :join-date (java.util.Date. 111 0 1))
 (make-user "Bobby" :join-date (java.util.Date. 111 0 1) :email "bobby@example.com")
+
+; function for mapping over
+(defn first-name-upcase
+  "Only takes the first-name key from the map"
+  [{:keys [first-name]}] ; in Clojure, specific key destruct is preferred, easier to reason about
+  (clojure.string/upper-case first-name))
+
+(map first-name-upcase (vals (:staff hospital))) ; from hospital, take staff, then only the values (which are maps)
