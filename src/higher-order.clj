@@ -91,3 +91,19 @@
 (filter #(= (count %) 3) strings-vec) ; only when length of word is 3
 
 (is (= '("bla") (filter #{"bla"} strings-vec))) ; only returns the found value
+
+;; example of a function taking function as argument
+(defn total_price
+  [price fee]
+  (+ price (fee price)))
+
+(defn flat_fee
+  [_price]
+  5)
+
+(defn proportional_fee
+  [price]
+  (* price 0.12))
+
+(total_price 1000 flat_fee)
+(total_price 1000 proportional_fee)
