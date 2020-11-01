@@ -117,3 +117,64 @@
         (recur (dec x)))))
 
 (countdown 5)
+
+;; various sum_upto examples
+; +
+(defn sum_upto_plus
+  [nr]
+  (apply + (range (inc nr))))
+
+; recursion of function by making a range seq
+(defn sum_upto_func
+  ([nr] (sum_upto_func (range (inc nr)) 0)) ; or (take (inc nr) (range))
+  ([nrcoll acc]
+   (if (empty? nrcoll)
+     acc
+     (recur (rest nrcoll) (+ (first nrcoll) acc)))))
+
+; recursion of function by dec nr using recur
+(defn sum_upto_func_dec
+  ([nr] (sum_upto_func_dec nr 0))
+  ([nr acc]
+   (if (= nr 0)
+     acc
+     (recur (dec nr) (+ nr acc)))))
+
+; loop
+(defn sum_upto_loop
+  [nr]
+  (loop [iter 1
+         acc  0]
+    (if (> iter nr)
+      acc
+      (recur (inc iter) (+ acc iter)))))
+
+; reduce
+(defn sum_upto_reduce
+  [nr]
+  (reduce + 0 (range (inc nr))))
+
+; for, infinite
+; If you are looking for how to write a loop in Clojure,
+; I'm sorry, but this is not what you are looking for. 
+; Clojure doesn't have an imperative loop because there 
+; is no mutable local variable in Clojure..
+; (defn sum_upto_for [])
+
+; doing an infinite using a buildup of a vector
+(def sum_upto_infinite
+  (iterate
+   (fn [[x acc]]
+     [acc (+' x acc)])
+   [0 1]))
+
+(is (= 55
+       (sum_upto_plus 10)
+       (sum_upto_func 10)
+       (sum_upto_func_dec 10)
+       (sum_upto_loop 10)
+       (sum_upto_reduce 10)
+      ;  (sum_upto_for 10)
+       (last (take 10 (map second sum_upto_infinite)))
+       (second (last (take 10 sum_upto_infinite))) ; or take 2nd value of last
+       ))
