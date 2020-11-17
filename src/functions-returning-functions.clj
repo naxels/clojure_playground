@@ -106,3 +106,47 @@
 (def double-+ (doubler +)) ; again returns a function, now assigned to variable
 
 (double-+ 1 2 3) ; and now the result
+
+;; Closures
+; When a function (let's call this inner function) 
+; is returned from another function (let's call this outer function), 
+; and the inner function does somethings with the arguments given 
+; from outer function, then the inner function is called a closure.
+(defn inner-function
+  [from-outer]
+  (fn [] (+ 1 from-outer)))
+
+; returns a function that going forward takes 0 arguments
+(def outer-function1 (inner-function 10))
+
+(def outer-function2 (inner-function 200))
+
+(outer-function1)
+(outer-function2)
+
+; another
+(defn range-to
+  [until]
+  (fn [] (range 1 (+ 1 until))))
+
+(def range-to-ten (range-to 10))
+
+(range-to-ten)
+
+; returning a map field
+(def persons [{:name "Romeo"
+               :age 16
+               :gender :male
+               :bike "Giant"
+               :house :rental}
+              {:name "Piet"}])
+
+(defn keyword-mapper
+  [keywrd]
+  (fn [coll] (map keywrd coll)))
+
+(def age-mapper (keyword-mapper :age))
+(def name-mapper (keyword-mapper :name))
+
+(age-mapper persons)
+(name-mapper persons)
