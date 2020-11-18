@@ -36,3 +36,21 @@
           (= b 1))
     0
     1))
+
+;; if-let
+; assign let when truthy
+(def person {:name "Romeo"
+             :age 16
+             :gender :male
+             :bike "Giant"
+             :house :rental})
+
+; yes and age assigned
+(if-let [age (:age person)]
+  (str "yes - " age)
+  "no")
+
+; no and address not assigned
+(if-let [address (:address person)]
+  (str "yes - " address)
+  "no")
