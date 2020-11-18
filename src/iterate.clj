@@ -40,7 +40,7 @@
 ;; and return as bigint.
 (defn doubler [n] (bigint (+ n n)))
 
-;; Define layz infinitive sequence
+;; Define lazy infinitive sequence
 ;; where each element is the doubled value
 ;; of the previous element.
 (def wheat-chessboard (iterate doubler 1))
