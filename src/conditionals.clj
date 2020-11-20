@@ -1,4 +1,5 @@
-(ns conditionals)
+(ns conditionals
+  (:require [data]))
 
 ;; Very interesting because you can 'stack' the function calls like with + / - * etc
 
@@ -15,9 +16,7 @@
     false))
 
 ;; or
-(def enemy {:name "Zulkaz", :health 250, :armor 0.8, :camp :trolls})
-
-(let [target enemy]
+(let [target data/enemy]
   (or (:armor target) 0)
 
 ; equivalent of
@@ -39,18 +38,13 @@
 
 ;; if-let
 ; assign let when truthy
-(def person {:name "Romeo"
-             :age 16
-             :gender :male
-             :bike "Giant"
-             :house :rental})
 
 ; yes and age assigned
-(if-let [age (:age person)]
+(if-let [age (:age data/person)]
   (str "yes - " age)
   "no")
 
 ; no and address not assigned
-(if-let [address (:address person)]
+(if-let [address (:address data/person)]
   (str "yes - " address)
   "no")

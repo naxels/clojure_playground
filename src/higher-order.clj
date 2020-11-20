@@ -1,5 +1,6 @@
 (ns higher-order
-  (:require [clojure.test :refer [is]]))
+  (:require [clojure.test :refer [is]]
+            data))
 
 ;; reduce
 (is (= 15
@@ -55,9 +56,7 @@
 (reduce + (map #(* % %) (range 5))) ; will return just the 30
 
 ;; apply ; applies all items in coll as argument
-(def strings-vec ["string1" "string2" "bla"])
-
-(is (= "string1string2bla" (apply str strings-vec)))
+(is (= "string1string2bla" (apply str data/strings-vec)))
 
 ; apply is useful here to filter b nil out
 (let [a 5
@@ -69,7 +68,7 @@
 (apply min 0 [])
 
 ; vs map which does operation on each + returns list
-(is (= '("string1" "string2" "bla") (map str strings-vec)))
+(is (= '("string1" "string2" "bla") (map str data/strings-vec)))
 
 ;; map
 (map #(* % 2) (range 10))
@@ -81,16 +80,16 @@
 ; a set #{} is a filter and can be used as predicate:
 (#{:foo :bar} :foo)
 (#{:foo :bar} :foo2)
-(map #{"bla"} strings-vec) ; (nil nil "bla")
+(map #{"bla"} data/strings-vec) ; (nil nil "bla")
 
 ;; filter
 (filter even? (range 10))
 
 (filter #(> % 5) (range 10))
 
-(filter #(= (count %) 3) strings-vec) ; only when length of word is 3
+(filter #(= (count %) 3) data/strings-vec) ; only when length of word is 3
 
-(is (= '("bla") (filter #{"bla"} strings-vec))) ; only returns the found value
+(is (= '("bla") (filter #{"bla"} data/strings-vec))) ; only returns the found value
 
 ;; example of a function taking function as argument
 (defn total_price

@@ -1,8 +1,6 @@
 (ns recursion
-  (:require [clojure.test :refer [is]]))
-
-;; collection
-(def test-coll [0 1 2 3 4])
+  (:require [clojure.test :refer [is]]
+            data))
 
 ;; call self
 
@@ -13,7 +11,7 @@
     0
     (+ 1 (length (rest coll)))))
 
-(is (= 5 (length test-coll)))
+(is (= 5 (length data/test-coll)))
 
 (is (= 0 (length [])))
 
@@ -22,7 +20,7 @@
     (cons (func (first a-list))
           (my-map func (next a-list))))) ; normally use rest, not next
 
-(is (= (list 1 2 3 4 5) (my-map #(+ 1 %) test-coll)))
+(is (= (list 1 2 3 4 5) (my-map #(+ 1 %) data/test-coll)))
 
 ;; recur
 (defn length-recur
@@ -32,7 +30,7 @@
      cnt
      (recur (rest coll) (+ 1 cnt)))))
 
-(is (= 5 (length-recur test-coll)))
+(is (= 5 (length-recur data/test-coll)))
 
 (is (= 0 (length-recur [])))
 
@@ -45,7 +43,7 @@
      accum
      (recur (rest coll) (+ (first coll) accum)))))
 
-(is (= 10 (sum test-coll)))
+(is (= 10 (sum data/test-coll)))
 
 (is (= 0 (sum [])))
 

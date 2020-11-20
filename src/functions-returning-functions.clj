@@ -1,6 +1,7 @@
 (ns functions-returning-functions
   (:require [clojure.test :refer [is]]
-            [clojure.string :as str]))
+            [clojure.string :as str]
+            data))
 
 ; you really have to see functions as values..
 
@@ -134,13 +135,6 @@
 (range-to-ten)
 
 ; returning a map field
-(def persons [{:name "Romeo"
-               :age 16
-               :gender :male
-               :bike "Giant"
-               :house :rental}
-              {:name "Piet"}])
-
 (defn keyword-mapper
   [keywrd]
   (fn [coll] (map keywrd coll)))
@@ -148,5 +142,5 @@
 (def age-mapper (keyword-mapper :age))
 (def name-mapper (keyword-mapper :name))
 
-(age-mapper persons)
-(name-mapper persons)
+(age-mapper data/persons)
+(name-mapper data/persons)
