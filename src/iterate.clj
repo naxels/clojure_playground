@@ -57,3 +57,38 @@
 ;; is an impressive number.
 (is (= 18446744073709551615N
        (reduce + (take 64 wheat-chessboard))))
+
+; infinitely add 2 to number starting at 0
+(take 10 (iterate (partial + 2) 0))
+; 0
+; (+ 2 0) ; => 2
+; (+ 2 2) ; => 4
+; (+ 2 4) ; => 6
+
+(take 10 (iterate (partial * 2) 1))
+; 1
+; (* 2 1) ; => 2
+; (* 2 2) ; => 4
+; (* 2 4) ; => 8
+; (* 2 8) ; => 16
+
+(take 10 (iterate (partial - 2) 0)) ; this won't work
+; 2
+; (- 2 0) ; => 2
+; (- 2 2) ; => 0
+; (- 2 0) ; => 2
+
+; this does:
+(take 10 (iterate #(- % 2) 0))
+
+(take 10 (iterate inc 0))
+(take 10 (iterate dec 0))
+
+; fib (see detailed breakdown in recursion.clj)
+(take 10 (map first (iterate (fn [[a b]] [b (+' a b)]) [0 1])))
+; [0 1]
+; [1 (+ 1 1)] ; => [1 1]
+; [1 (+ 1 1)] ; => [1 2]
+; [2 (+ 1 2)] ; => [2 3]
+; [3 (+ 2 3)] ; => [3 5]
+; [5 (+ 3 5)] ; => [5 8]
