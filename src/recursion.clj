@@ -47,6 +47,29 @@
 
 (is (= 0 (sum [])))
 
+;; recursion with nil return when empty instead of result
+;; from Functional Programming for the Object-Oriented Programmer
+(defn class-symbol-above
+  "Lookup function that translates the lookup symbol into the next symbol or nil"
+  [class-symbol]
+  (case class-symbol
+    RedPoint 'Point ;; test-constants are not evaluated, so the symbols should NOT be quoted
+    Point 'Anything
+    Anything 'Bicycle
+    Bicycle 'Ride
+    nil))
+
+(def recursive-function
+  (fn [class-symbol]
+    (if (nil? class-symbol)
+      nil
+      (cons class-symbol (recursive-function (class-symbol-above class-symbol))))))
+
+; same as:
+(cons 'RedPoint (cons 'Point (cons 'Anything (cons 'Bicycle (cons 'Ride nil)))))
+
+(recursive-function 'RedPoint)
+
 ;; loop
 (loop [x 10]
   (when (> x 1)
