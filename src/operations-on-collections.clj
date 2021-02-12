@@ -84,6 +84,8 @@
 
 (assoc [:a :b :c :d] 2 :z) ; replace vector index with val
 
+(assoc [1 2 5 6 8 9] 2 100) ; another example of replace vector index with val
+
 ; for using with reduce:
 (defn lookup [id] ; a function can easily return a map
   {:index "backup"
