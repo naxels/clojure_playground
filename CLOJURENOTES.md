@@ -17,4 +17,10 @@ false
 ; easy replace by:
 (or (:armor target) 0)
 
+; most functions are lazy, therefor there is no function that returns the first result of predicate since it's the same as (first (filter ))
+
 ; see/treat functions as values
+
+; prefer zero? over = 0
+(zero? (expression))
+(= 0 (expression))
