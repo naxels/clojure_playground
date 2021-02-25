@@ -13,7 +13,7 @@
 
 (is (= 5 (length data/test-coll)))
 
-(is (= 0 (length [])))
+(is (zero? (length [])))
 
 (defn my-map [func a-list]
   (when a-list
@@ -32,7 +32,7 @@
 
 (is (= 5 (length-recur data/test-coll)))
 
-(is (= 0 (length-recur [])))
+(is (zero? (length-recur [])))
 
 ; https://practicalli.github.io/clojure/thinking-functionally/tail-recursion.html
 
@@ -45,7 +45,7 @@
 
 (is (= 10 (sum data/test-coll)))
 
-(is (= 0 (sum [])))
+(is (zero? (sum [])))
 
 ;; recursion with nil return when empty instead of result
 ;; from Functional Programming for the Object-Oriented Programmer

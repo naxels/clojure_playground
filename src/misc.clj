@@ -4,7 +4,7 @@
 ; from The Clojure Workshop
 (let [x 50]
   (if (or (<= 1 x 100) ; <- very interesting, much more readable than javascript: if (x >= 1 && x <= 100)
-          (= 0 (mod x 100)))
+          (zero? (mod x 100)))
     (println "Valid")
     (println "Invalid")))
 
