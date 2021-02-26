@@ -1,0 +1,42 @@
+<rss xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:yweather="http://xml.weather.yahoo.com/ns/rss/1.0" version="2.0">
+    <channel>
+        <yweather:units distance="km" pressure="mbar" speed="km/h" temperature="C" />
+        <title>Yahoo! Weather - Sunnyvale, CA, US</title>
+        <link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2502265/</link>
+        <description>Yahoo! Weather for Sunnyvale, CA, US</description>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 09 Jan 2019 12:32 PM PST</lastBuildDate>
+        <ttl>60</ttl>
+        <yweather:location city="Sunnyvale" country="United States" region=" CA" />
+        <yweather:wind chill="59" direction="135" speed="13" />
+        <yweather:atmosphere humidity="80" pressure="1011.0" rising="0" visibility="16.1" />
+        <yweather:astronomy sunrise="7:23 am" sunset="5:8 pm" />
+        <image>
+            <title>Yahoo! Weather</title>
+            <width>142</width>
+            <height>18</height>
+            <link>http://weather.yahoo.com</link>
+            <url>http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif</url>
+        </image>
+        <item>
+            <title>Conditions for Sunnyvale, CA, US at 11:00 AM PST</title>
+            <geo:lat>37.371609</geo:lat>
+            <geo:long>-122.038254</geo:long>
+            <link>http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2502265/</link>
+            <pubDate>Wed, 09 Jan 2019 11:00 AM PST</pubDate>
+            <yweather:condition code="26" date="Wed, 09 Jan 2019 11:00 AM PST" temp="15" text="Cloudy" />
+            <yweather:forecast code="11" date="09 Jan 2019" day="Wed" high="16" low="10" text="Showers" />
+            <yweather:forecast code="28" date="10 Jan 2019" day="Thu" high="15" low="8" text="Mostly Cloudy" />
+            <yweather:forecast code="12" date="11 Jan 2019" day="Fri" high="15" low="8" text="Rain" />
+            <yweather:forecast code="12" date="12 Jan 2019" day="Sat" high="16" low="9" text="Rain" />
+            <yweather:forecast code="11" date="13 Jan 2019" day="Sun" high="14" low="9" text="Showers" />
+            <yweather:forecast code="39" date="14 Jan 2019" day="Mon" high="15" low="8" text="Scattered Showers" />
+            <yweather:forecast code="39" date="15 Jan 2019" day="Tue" high="14" low="7" text="Scattered Showers" />
+            <yweather:forecast code="11" date="16 Jan 2019" day="Wed" high="15" low="10" text="Showers" />
+            <yweather:forecast code="11" date="17 Jan 2019" day="Thu" high="15" low="10" text="Showers" />
+            <yweather:forecast code="28" date="18 Jan 2019" day="Fri" high="15" low="10" text="Mostly Cloudy" />
+            <description><![CDATA[<img src="http://l.yimg.com/a/i/us/we/52/26.gif"/> <BR /> <b>Current Conditions:</b> <BR />Cloudy <BR /> <BR /> <b>Forecast:</b> <BR /> Wed - Showers. High: 16Low: 10 <BR /> Thu - Mostly Cloudy. High: 15Low: 8 <BR /> Fri - Rain. High: 15Low: 8 <BR /> Sat - Rain. High: 16Low: 9 <BR /> Sun - Showers. High: 14Low: 9 <BR /> <BR /> <a href="http://us.rd.yahoo.com/dailynews/rss/weather/Country__Country/*https://weather.yahoo.com/country/state/city-2502265/">Full Forecast at Yahoo! Weather</a> <BR /> <BR /> <BR /> ]]></description>
+            <guid isPermaLink="false" />
+        </item>
+    </channel>
+</rss>
