@@ -1,5 +1,5 @@
 (ns functional-thinking.5
-  (:require [clojure.data.xml :refer [parse]]
+  (:require [clojure.data.xml :refer [parse alias-uri]]
             ;[clojure.xml :refer [parse]]
             [clojure.java.io :as io]
             [clojure.test :refer [is]]))
@@ -41,13 +41,21 @@
 ;; (qualify :location)
 ;; => :xmlns.http%3A%2F%2Fxml.weather.yahoo.com%2Fns%2Frss%2F1.0/location
 
+; Easier namespaces than function/translation:
+;; https://github.com/clojure/data.xml#namespace-support
+;; Emitting namespaced XML is usually done by using alias-uri 
+;; in combination with clojure's built-in ::kw-ns/shorthands:
+(alias-uri 'xh "http://xml.weather.yahoo.com/ns/rss/1.0")
+;; ::xh/location
+;; => :xmlns.http%3A%2F%2Fxml.weather.yahoo.com%2Fns%2Frss%2F1.0/location
 
 ; get the location
 (defn get-location
   [city-code]
   (for [x (get-xml-from-file city-code)
         ;; :when (= :yweather:location (:tag x))
-        :when (= (qualify :location) (:tag x))]
+        ;; :when (= (qualify :location) (:tag x))
+        :when (= ::xh/location (:tag x))]
     (str (:city (:attrs x)) "," (:region (:attrs x)))))
 
 ; get the temperature
@@ -55,7 +63,8 @@
   [city-code]
   (for [x (get-xml-from-file city-code)
         ;; :when (= :yweather:condition (:tag x))
-        :when (= (qualify :condition) (:tag x))]
+        ;; :when (= (qualify :condition) (:tag x))
+        :when (= ::xh/condition (:tag x))]
     (:temp (:attrs x))))
 
 (get-location 12770744)
@@ -88,6 +97,6 @@
 (dorun (map #(is (= "A" (letter-grade %))) (range 90 100)))
 (dorun (map #(is (= "B" (letter-grade %))) (range 80 90)))
 ; test string to uppercase
-(dorun (map #(is (= (.toUpperCase %) (letter-grade %))) ["A" "B" "C" "D" "E" "F" "a" "b" "c" "d" "e" "f"]))
+(dorun (map #(is (= (.toUpperCase %) (letter-grade %))) ["A" "B" "C" "D" "F" "a" "b" "c" "d" "f"]))
 ; test not found letter
 (is (= nil (letter-grade "G")))
