@@ -55,6 +55,14 @@
 (reductions + (map #(* % %) (range 5))) ; from 0->5, double the number, add them up
 (reduce + (map #(* % %) (range 5))) ; will return just the 30
 
+; when writing a custom function for reduce, needs 2 arguments
+; 1st: the accumulator up until that point
+; 2nd: the value coming from the collection at that iteration
+(reduce (fn [so-far val] 
+          (assoc so-far val (count so-far)))
+        {}
+        [:a :b :c])
+
 ;; apply ; applies all items in coll as argument
 (is (= "string1string2bla" (apply str data/strings-vec)))
 
