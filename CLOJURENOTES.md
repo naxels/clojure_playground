@@ -19,6 +19,8 @@ false
 
 ; most functions are lazy, therefor there is no function that returns the first result of predicate since it's the same as (first (filter ))
 
+; filter returns seq, select returns set
+
 ; see/treat functions as values
 
 ; prefer zero? over = 0
