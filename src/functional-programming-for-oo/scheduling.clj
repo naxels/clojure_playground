@@ -34,11 +34,11 @@
                                             (:course-name course))))
            courses)))
 
-(answer-annotations [{:course-name "zigging" :limit 4, :registered 3}
-                     {:course-name "zagging" :limit 1, :registered 1}]
-                    ["zagging"])
+;; (answer-annotations [{:course-name "zigging" :limit 4, :registered 3}
+;;                      {:course-name "zagging" :limit 1, :registered 1}]
+;;                     ["zagging"])
 
-(answer-annotations data ["Zigging"])
+;; (answer-annotations data ["Zigging"])
 
 (defn domain-annotations
   [courses]
@@ -48,9 +48,9 @@
                 :full? (zero? (:spaces-left course))))
        courses))
 
-(domain-annotations [{:registered 1, :spaces-left 1},
-                     {:registered 0, :spaces-left 1},
-                     {:registered 1, :spaces-left 0}])
+;; (domain-annotations [{:registered 1, :spaces-left 1},
+;;                      {:registered 0, :spaces-left 1},
+;;                      {:registered 1, :spaces-left 0}])
 
 (defn note-unavailability
   [courses instructor-count]
@@ -72,14 +72,14 @@
       domain-annotations
       (note-unavailability instructor-count)))
 
-(annotate data ["Zigging"] 2)
+;; (annotate data ["Zigging"] 2)
 
 (defn separate
   "Separate the coll on predicate, returns vec of seq's"
   [predicate coll]
   [(filter predicate coll) (remove predicate coll)])
 
-(separate odd? [1 2 3 4 5])
+;; (separate odd? [1 2 3 4 5])
 
 ; capturing the 2 data set with let, very verbose
 (let [both (separate odd? [1 2 3 4 5])
@@ -105,7 +105,7 @@
            (select-keys course desired-keys))
          courses)))
 
-(final-shape data)
+;; (final-shape data)
 
 (defn half-day-solution
   [courses registrants-courses instructor-count]
