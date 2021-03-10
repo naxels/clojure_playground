@@ -105,6 +105,11 @@
 (dissoc data/coll-map :z) ; not found key just returns the coll
 (dissoc data/coll-map :a)
 
+; dissoc can be of great use as an opposite to select-keys if there are more keys to keep than remove from map
+(dissoc data/person :house)
+; same as:
+(select-keys data/person [:name :age :gender :bike])
+
 ; combined:
 (-> data/coll-map-nested
     (assoc :d 1)
