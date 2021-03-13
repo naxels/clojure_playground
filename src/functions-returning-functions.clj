@@ -144,3 +144,12 @@
 
 (age-mapper data/persons)
 (name-mapper data/persons)
+
+;; constantly
+(def boring (constantly 10))
+
+(boring 1 2 3)
+
+(reduce + (map (constantly 1) [:a :b :c]))
+
+(map (constantly 9) [1 2 3])
