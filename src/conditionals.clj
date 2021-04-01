@@ -48,3 +48,30 @@
 (if-let [address (:address data/person)]
   (str "yes - " address)
   "no")
+
+;; cond
+; use the cond macro when you have 3 or more if's/branches
+(defn string-number
+  [n]
+  (cond
+    (odd? n) "odd"
+    ;; (even? n) "even"
+    (< n 0) "negative"
+    (> n 0) "positive"))
+
+(string-number 1)
+(string-number 2)
+(string-number -1)
+(string-number 0) ; returns nil when no match
+
+;; condp
+; uses a function to decide which branch to execute
+(defn op 
+  [sel]
+  (condp = sel
+    "plus"  +
+    "minus" -
+    "mult"  *
+    "div"   /))
+
+((op "mult") 3 3) ; (* 3 3)
