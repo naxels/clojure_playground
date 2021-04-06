@@ -17,7 +17,7 @@
  {}
  [:a :b :c :d :e])
 
-(def repos [{:private true}{:private true}{:private false}])
+(def repos [{:private true} {:private true} {:private false}])
 
 ; great example on reducing over a map, updating values for keys
 (reduce-kv (fn [m _index repo]
@@ -58,7 +58,7 @@
 ; when writing a custom function for reduce, needs 2 arguments
 ; 1st: the accumulator up until that point
 ; 2nd: the value coming from the collection at that iteration
-(reduce (fn [so-far val] 
+(reduce (fn [so-far val]
           (assoc so-far val (count so-far)))
         {}
         [:a :b :c])
@@ -89,6 +89,14 @@
 (#{:foo :bar} :foo)
 (#{:foo :bar} :foo2)
 (map #{"bla"} data/strings-vec) ; (nil nil "bla")
+
+; a map can be used as a function
+;; visit-counts is a map
+(def visit-counts {"ethel" 11 "lucy" 26 "ricky" 5})
+;; map used in function position
+(visit-counts "ethel")
+;; map passed as function to higher-order function
+(map visit-counts ["ricky" "lucy"])
 
 ;; filter
 (filter even? (range 10))
