@@ -194,3 +194,13 @@
 (partition-by #(< 10 %) data/coll-vec)
 (partition-by #(odd? %) data/coll-vec) ; it doesn't 'collect' values until pred is fully done
 (partition-by #(> 5 %) data/coll-vec) ; easily displayed here
+
+;; split-at
+(split-at 2 data/coll-vec)
+(split-at 100 data/coll-vec) ; doesn't error on our of range
+
+;; split-with
+(split-with (partial >= 3) data/coll-vec)
+(split-with #(< (mod % 6) 5) data/coll-vec)
+; easily testible by just running the function with map
+; (map #(< (mod % 6) 5) data/coll-vec)
