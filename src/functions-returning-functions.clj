@@ -79,9 +79,9 @@
       (/ 8)))
 
 (is (= [12000 3000/13 600/13 75/13] ((juxt salary-monthly->yearly
-                salary-monthly->weekly
-                salary-monthly->daily
-                salary-monthly->hourly) 1000)))
+                                           salary-monthly->weekly
+                                           salary-monthly->daily
+                                           salary-monthly->hourly) 1000)))
 
 ; (float $)
 ; (format "%.2f" $)
@@ -107,6 +107,81 @@
 (def double-+ (doubler +)) ; again returns a function, now assigned to variable
 
 (double-+ 1 2 3) ; and now the result
+
+; Udemy Clojure from beginner to advanced
+(defn make-inc
+  []
+  (fn [x] (+ 1 x)))
+
+;; (make-inc 2) ; doesn't work since make-inc doesn't take args
+(def my-inc (make-inc)) ; gets the func from make-inc and assigns it to my-inc
+(my-inc 2) ; 3
+
+(defn make-inc-with-arg
+  [x]
+  (fn [y] (+ y x)))
+
+(def inc-5 (make-inc-with-arg 5)) ; like partial, returns a func with 1 arg filled
+(def inc-8 (make-inc-with-arg 8))
+(inc-5 5) ; 10
+(inc-8 5) ; 13
+
+; function as argument
+(defn test-and-inc
+  [tst-fn x]
+  (if (tst-fn x)
+    (inc x)
+    x))
+
+(test-and-inc odd? 3) ; 4
+(test-and-inc odd? 4) ; 4
+
+(defn my-apply-two
+  [f1 f2 arg]
+  (f1 (f2 arg)))
+
+(my-apply-two inc inc 5) ; 7
+(my-apply-two inc #(* 5 %) 5) ; 26
+
+(defn my-comp [f1 f2]
+  (fn [arg] (f1 (f2 arg))))
+
+(def times-five-inc (my-comp inc #(* 5 %))) ; returns func
+(times-five-inc 5) ; 26
+
+(let [a 5]
+  (defn foo [b]
+    (* b a)))
+
+(foo 5) ; 25
+
+;; my own trials
+(defn hospital-staff-for-position
+  [position]
+  (filter #(= (:position %) position) (vals (:staff data/hospital))))
+
+(def hospital-residents (hospital-staff-for-position :resident))
+
+(defn combine-two-datapoints
+  [f]
+  (if (= print f) ; so easy to compare incoming function
+    (fn [d1 d2] (f d1 d2))
+    (fn [d1 d2] (f d1 " " d2))))
+
+(def combine-names-by-str (combine-two-datapoints str))
+
+(def combine-names-by-print (combine-two-datapoints print))
+
+(defn get-names
+  [coll]
+  (combine-names-by-str (:first-name coll) (:last-name coll)))
+
+(defn print-names
+  [coll]
+  (combine-names-by-print (:first-name coll) (:last-name coll)))
+
+(map get-names hospital-residents)
+(map print-names hospital-residents)
 
 ;; Closures
 ; When a function (let's call this inner function) 
