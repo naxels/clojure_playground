@@ -204,3 +204,10 @@
 (split-with #(< (mod % 6) 5) data/coll-vec)
 ; easily testible by just running the function with map
 ; (map #(< (mod % 6) 5) data/coll-vec)
+
+;; transpose
+(defn transpose
+  [coll]
+  (apply mapv vector coll))
+
+(transpose [[1 2 3] [4 5 6] [7 8 9]])
