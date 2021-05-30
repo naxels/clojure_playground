@@ -26,3 +26,7 @@ false
 ; prefer zero? over = 0
 (zero? (expression))
 (= 0 (expression))
+
+; any? seems to return just true for anything..
+; so it's not the same as (not (not-any?)) !
+; https://stackoverflow.com/a/39134040
