@@ -44,6 +44,9 @@
 
 (is (= :camel-case (camel->keyword "CamelCase")))
 
+; run multiple composed functions using map
+(map (comp dec #(* 2 %) inc) data/coll-vec) ; for each number: first runs inc, then doubles the numbers and finally runs dec
+
 ;; juxt
 ; Takes a set of functions and returns a fn that is the juxtaposition
 ; of those fns.  The returned fn takes a variable number of args, and
