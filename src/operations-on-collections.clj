@@ -14,12 +14,36 @@
 ; (some? x) is equal to (not (nil? x))
 
 ;; some ; boolean test, Returns the first logical true value
-(is (= true (some even? data/coll-vec)))
-
+; returns the value of the set that you are looking for
+;; https://stackoverflow.com/a/32405094 ; benchmark of func with some with reduce
 (is (= 15 (some #{15} data/coll-vec))) ; https://insideclojure.org/2015/01/27/clojure-tips-contains/
+(is (nil? (some #{21} data/coll-vec))) ; and returns nil when not found
+
+; getting the first matching value
+;; https://stackoverflow.com/a/10192733/ ; due to lazy, defn find-first will not process entire coll
+(defn find-first
+  [f coll]
+  (first (filter f coll)))
+
+(is (= 6 (find-first #(> % 5) data/coll-vec)))
+; vs, some
+(is (= 6 (some #(when (> % 5) %) data/coll-vec)))
+; vs, reduce is faster they say on larger infinite colls
+(is (= 6 (reduce #(when (> %2 5) (reduced %2)) nil data/coll-vec)))
 
 (is (= true (some #(= 15 %) data/coll-vec)))
 (is (nil? (some #(= 14 %) data/coll-vec))) ; there is no 14th key/index
+
+; can also return true/false
+(is (= true (some even? data/coll-vec)))
+; you can change a value to boolean quickly with some?
+(is (= false (some? (some #(when (> % 30) %) data/coll-vec))))
+; or
+(is (= false (boolean (some #(when (> % 30) %) data/coll-vec)))) ; Everything except false and nil is logically true in Clojure
+; or
+(is (= false (not (not-any? #(when (> % 30) %) data/coll-vec)))) ; is not any? !
+
+; https://stackoverflow.com/questions/9491400/why-does-clojure-not-have-an-any-or-any-pred-function
 
 ;; contains? ; warning: only for keys!
 (is (= true (contains? data/coll-map :a)))
@@ -41,8 +65,11 @@
 ; because seq on empty returns nil:
 (is (nil? (seq [])))
 
-;; every?
+;; every? true if all fit the predicate
 (is (= true (every? keyword? (keys data/coll-map))))
+
+(is (= true (every? #(< % 90) data/coll-vec)))
+(is (= false (every? #(> % 5) data/coll-vec)))
 
 ;; remove
 ; remove nil from coll
@@ -211,3 +238,33 @@
   (apply mapv vector coll))
 
 (transpose [[1 2 3] [4 5 6] [7 8 9]])
+
+;; sort-by
+; sorting using comp
+(sort-by (comp - :created_at) data/unordered)
+; same as
+(sort-by #(- (:created_at %)) data/unordered)
+
+; can also be done with a comparator:
+(defn descending 
+  "sort descending"
+  [a b]
+  (compare b a))
+
+(sort-by :created_at descending data/unordered)
+
+; this doesn't work
+;; (sort-by :created_at - unordered) ; since - is not used properly as comparator
+
+;; every-pred - combine predicates
+(filter (every-pred #(> % 5)
+                    #(< % 10)
+                    even?)
+        data/coll-vec)
+
+; can also do with applying every-pred to for example vec:
+(def filters [#(> % 5)
+              #(< % 10)
+              even?])
+
+(filter (apply every-pred filters) data/coll-vec)
