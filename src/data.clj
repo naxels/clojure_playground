@@ -82,3 +82,7 @@
 (def unordered '({:created_at 1612637437}
                  {:created_at 1610998684}
                  {:created_at 1622245799}))
+
+(def list-one '(1 2 3 4 5 6 7 8 9 0))
+(def list-two '(1 2 3 4 5 5 6 6 9 0))
+(def list-vec-combined '([:a :b] [:b :b] [:a :c] [:c :c] [:d :d]))

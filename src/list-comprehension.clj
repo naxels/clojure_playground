@@ -1,5 +1,5 @@
 (ns list-comprehension
-  (:require [clojure.test :refer [is]]))
+  (:require #_[clojure.test :refer [is]]))
 
 ;; for
 ;; 
