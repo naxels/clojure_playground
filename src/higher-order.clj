@@ -122,3 +122,45 @@
 
 (total_price 1000 flat_fee)
 (total_price 1000 proportional_fee)
+
+;; another example adjusted from Functional Programming PragPub Ch5: Creating a Higher-Order Function in Scala
+(def prices '(10 20 15 30 45 25 82))
+
+(defn total-prices
+  ([coll] (total-prices coll (constantly true))) ; tip from Discord: call func and set pred to always true
+  ([coll pred]
+   (let [f-applied (filter pred coll)]
+     (reduce + 0 f-applied))))
+
+(total-prices prices)
+
+(total-prices prices #(> % 40))
+
+(total-prices prices #(< % 40))
+
+; ability to send in the function as well as predicate
+(defn total-prices-fn
+  [coll f pred]
+  (let [f-applied (f pred coll)]
+    (reduce + 0 f-applied)))
+
+(total-prices-fn prices filter #(> % 40))
+
+(total-prices-fn prices filter #(< % 40))
+
+(total-prices-fn prices map #(* 2 %))
+
+(total-prices-fn prices take 3)
+
+; given by person from Discord discussion about the above total-prices functions
+(defn total-prices-transduce
+  [f coll]
+  (transduce f + coll))
+
+(total-prices-transduce (filter #(> % 40)) prices)
+
+(total-prices-transduce (filter #(< % 40)) prices)
+
+(total-prices-transduce (map #(* 2 %)) prices)
+
+(total-prices-transduce (take 3) prices)
