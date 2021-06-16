@@ -83,7 +83,7 @@
 
 (map odd? (range 10))
 
-(map inc (range 10))
+(map inc (range 10)) ; (1 2 3 4 5 6 7 8 9 10)
 
 ; a set #{} is a filter and can be used as predicate:
 (#{:foo :bar} :foo)
@@ -98,14 +98,26 @@
 ;; map passed as function to higher-order function
 (map visit-counts ["ricky" "lucy"])
 
+;; mapv - mapv is a specialized version of map producing a vector instead of a lazy-sequence as output. 
+;         It uses a transient internally so it’s faster than the equivalent (into [] (map f coll))
+; diff: https://clojuredocs.org/clojure.core/mapv#example-5dcd0c40e4b0ca44402ef7de
+
+(mapv inc (range 10)) ; [1 2 3 4 5 6 7 8 9 10]
+
+;; map-indexed ; f needs 2 args, puts an index number as 1st arg
+(map-indexed (fn [idx v] [idx (inc v)]) (range 10))
+
 ;; filter
-(filter even? (range 10))
+(filter even? (range 10)) ; (0 2 4 6 8)
 
 (filter #(> % 5) (range 10))
 
 (filter #(= (count %) 3) data/strings-vec) ; only when length of word is 3
 
 (is (= '("bla") (filter #{"bla"} data/strings-vec))) ; only returns the found value
+
+;; filterv - returns a vector rather than a sequence.
+(filterv even? (range 10)) ; [0 2 4 6 8]
 
 ;; example of a function taking function as argument
 (defn total_price

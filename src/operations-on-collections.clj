@@ -235,9 +235,12 @@
 ;; transpose
 (defn transpose
   [coll]
-  (apply mapv vector coll))
+  (apply mapv vector coll) ; [[1 4 7] [2 5 8] [3 6 9]]
+  #_(apply map vector coll))   ; ([1 4 7] [2 5 8] [3 6 9])
 
 (transpose [[1 2 3] [4 5 6] [7 8 9]])
+; same as
+(mapv vector [1 2 3] [4 5 6] [7 8 9])
 
 ;; sort-by
 ; sorting using comp
@@ -268,3 +271,6 @@
               even?])
 
 (filter (apply every-pred filters) data/coll-vec)
+
+;; subvec
+(subvec [1 2 3 4] 1 3) ; [2 3]

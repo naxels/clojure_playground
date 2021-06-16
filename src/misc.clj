@@ -1,4 +1,5 @@
-(ns misc)
+(ns misc
+  (:require data))
 
 ;; < , <= , > , >= . These functions return true when their arguments are in the correct order, so you can stack them
 ; from The Clojure Workshop
@@ -14,3 +15,9 @@
       b 100
       z 150]
   (<= 1 a x y 100 b z)) ; true
+
+;; identity - returns what you pass to it
+(identity 4) ; 4
+
+; can be very handy when you do an operation on coll and also want the coll back
+(map (juxt :name identity) data/customers)
