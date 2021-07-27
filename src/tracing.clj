@@ -6,6 +6,8 @@
 (trace/trace-ns 'tracing) ; trace entire namespace
 
 ; port from Racket/Scheme
+; recursion without accumulation
+
 ;; (trace/deftrace multisubst ; trace a specific function
 (defn multisubst
   [new old lat]
@@ -28,13 +30,14 @@
 
 (multisubstclj 'vegetables 'fruit '(the cats eat meat no fruit they do not like fruit apen))
 
+; in a more clojure style:
 (defn multisubstclj-two
   [new old lat]
   (if (empty? lat)
     '()
-    (let [new-or-first (if (= (first lat) old)
-                         new
-                         (first lat))] 
+    (let [f-lat (first lat)
+          new-or-first (or (when (= f-lat old) new)
+                           f-lat)]
          (cons new-or-first (multisubstclj-two new old (rest lat))))))
 
 (multisubstclj-two 'vegetables 'fruit '(the cats eat meat no fruit they do not like fruit apen))
