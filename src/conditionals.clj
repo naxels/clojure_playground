@@ -36,6 +36,23 @@
     0
     1))
 
+(defn sublist-or-empty
+  [sublist x]
+  (conj (or sublist []) x))
+
+(sublist-or-empty false 1) ; will conj [] with 1
+(sublist-or-empty [2] 1) ; will conj the sublist with 1
+
+; same as:
+(defn sublist-if-empty
+  [sublist x]
+  (if sublist ; or do an inline if (conj (if....) x)
+    (conj sublist x)
+    (conj [] x)))
+
+(sublist-if-empty false 1)
+(sublist-if-empty [2] 1)
+
 ;; if-let
 ; assign let when truthy
 
