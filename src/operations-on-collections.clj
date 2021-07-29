@@ -156,11 +156,16 @@
 ;; update-in
 (update-in data/coll-map-nested [:c :x1 :x2] #(str % %)) ; duplicate the string value
 
-;; conj
+;; conj ; add value to the most efficient position of the coll
+; vec: at the end
+(conj [1 2 3] 4)
+; list: at the beginning
+(conj '(1 2 3) 4)
+; map: at the end can be done with map and vec length of 2
 (is (= (conj data/coll-map-words {"jaap" 1})
        (conj data/coll-map-words ["jaap" 1]))) ; same because it can be converted to map
 
-;; cons ; add value to beginning of list
+;; cons ; Returns a new seq where x is the first element and seq is the rest. So list: add value to beginning of list
 (cons 1 '(2 3 4 5))
 (cons 1 [2 3 4 5])
 
