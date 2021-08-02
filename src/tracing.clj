@@ -1,5 +1,6 @@
 (ns tracing
-  (:require [clojure.tools.trace :as trace]))
+  (:require [clojure.tools.trace :as trace]
+            [clojure.string]))
 
 (trace/trace (* 2 3))
 
@@ -69,6 +70,12 @@
             (conj so-far new-or-val)))
         '()
         (reverse '(the cats eat meat no fruit they do not like fruit apen))) ; need to again use reverse
+
+; convert to string, transform, convert to symbol
+(map symbol (clojure.string/split (clojure.string/replace (clojure.string/join " " '(the cats eat meat no fruit they do not like fruit apen))
+                                              #"fruit"
+                                              "vegetables")
+                      #" "))
 
 (defn length [collection]
   (if (empty? collection)
