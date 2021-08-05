@@ -1,8 +1,11 @@
 (ns threading-macros
   (:require [data]))
 
-;; as->
-
+;; as-> ; assign value to variable, then put it anywhere in next forms
+(as-> 0 n ; sets 0 to n
+  (inc n)
+  (inc n)
+  (+ n 5))
 
 ;; cond-> (thread first) && cond->> (thread last)
 ; walks through all expressions, ignoring expressions that evaluate to false
