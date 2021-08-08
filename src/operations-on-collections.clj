@@ -279,3 +279,15 @@
 
 ;; subvec
 (subvec [1 2 3 4] 1 3) ; [2 3]
+
+; create an index function and return index or -1
+; https://programming-idioms.org/idiom/222/find-first-index-of-an-element-in-list/4495/clojure
+(defn find-index [x items]
+  (or (->> items
+           (map-indexed vector)
+           (filter #(= x (peek %)))
+           ffirst)
+      -1))
+
+(find-index 9 (range 10))
+(find-index 11 (range 10))
