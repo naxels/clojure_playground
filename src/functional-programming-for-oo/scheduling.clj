@@ -84,7 +84,7 @@
 ; capturing the 2 data set with let, very verbose
 (let [both (separate odd? [1 2 3 4 5])
       _odds (first both)
-      evens (second both)]
+      evens (peek both)]
   evens)
 
 ; capturing the 2 data sets with destructuring

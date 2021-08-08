@@ -53,7 +53,7 @@ map-of-hash
 (map titleize #{"Elbows" "Soap Carving"})
 ; => ("Elbows for the Brave and True" "Soap Carving for the Brave and True")
 
-(map #(titleize (second %)) {:uncomfortable-thing "Winking"})
+(map #(titleize (peek %)) {:uncomfortable-thing "Winking"})
 ; => ("Winking for the Brave and True")
 
 

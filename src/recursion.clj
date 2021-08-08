@@ -218,8 +218,8 @@
        (sum_upto_loop 10)
        (sum_upto_reduce 10)
       ;  (sum_upto_for 10)
-       (last (take 10 (map second sum_upto_infinite)))
-       (second (last (take 10 sum_upto_infinite))) ; or take 2nd value of last
+       (last (take 10 (map peek sum_upto_infinite)))
+       (peek (last (take 10 sum_upto_infinite))) ; or take last value of the vec returned by last
        ; sending a coll
        (sum_upto_coll (range (inc 10)))
        ))

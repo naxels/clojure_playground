@@ -31,7 +31,7 @@
   (->> (range 1 until-nr)
        (filter even?)
        (map #(perfect-num-vec %))
-       (filter #(= :perfect (second %)))))
+       (filter #(= :perfect (peek %)))))
 
 (perfect-numbers 10000)
 ; 10000
