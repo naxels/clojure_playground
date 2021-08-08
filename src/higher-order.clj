@@ -107,6 +107,9 @@
 ;; map-indexed ; f needs 2 args, puts an index number as 1st arg
 (map-indexed (fn [idx v] [idx (inc v)]) (range 10))
 
+; easy way to create an indexed vector from your coll
+(map-indexed vector (range 25))
+
 ;; filter
 (filter even? (range 10)) ; (0 2 4 6 8)
 
