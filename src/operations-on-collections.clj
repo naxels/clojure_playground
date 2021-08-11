@@ -72,7 +72,7 @@
 (is (= false (every? #(> % 5) data/coll-vec)))
 
 ;; remove
-; remove nil from coll
+; remove nil from coll 
 (is (= [1 2 3] (remove nil? [1 nil 2 nil 3 nil])))
 ; can also be done with filter and some
 (is (= [1 2 3] (filter some? [1 nil 2 nil 3 nil]))) ; some will not return nil
@@ -237,6 +237,11 @@
 ; easily testible by just running the function with map
 ; (map #(< (mod % 6) 5) data/coll-vec)
 
+; remove the first occurance from coll:
+(let [[n m]
+      (split-with (partial not= 5) data/list-two)]
+  (concat n (rest m))) ; concat the coll, skipping the first of m
+
 ;; transpose
 (defn transpose
   [coll]
@@ -291,3 +296,28 @@
 
 (find-index 9 (range 10))
 (find-index 11 (range 10))
+
+;; keep Returns a lazy sequence of the non-nil results of (f item). Note this means false return values will be included.
+(keep even? (range 1 10))
+
+; great example and comparison:
+; https://clojuredocs.org/clojure.core/keep#example-542692cfc026201cdc326e82
+
+(filter odd? (range 10)) ; returns the vals
+(keep odd? (range 10)) ; returns the output of odd?
+(map odd? (range 10)) ; same as keep in this case
+
+(keep {:a 1, :b 2, :c 3} [:a :b :d]) ; returns the map values found in the coll
+
+;; distinct - remove all duplicates
+(distinct data/list-two)
+
+;; dedup - remove consecutive duplicates
+(dedupe data/list-two)
+
+;; min-key
+;; max-key
+(min-key peek ["Jon" 1] ["Rich" 6] ["Nancy" 3])
+(max-key peek ["Jon" 1] ["Rich" 6] ["Nancy" 3])
+(max-key count "asd" "bsd" "dsd" "long word")
+(apply max-key val {:a 3 :b 7 :c 9})
