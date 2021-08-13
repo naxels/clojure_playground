@@ -88,3 +88,33 @@
   (clojure.string/upper-case first-name))
 
 (map first-name-upcase (vals (:staff data/hospital))) ; from hospital, take staff, then only the values (which are maps)
+
+; https://otavio.dev/2021/08/12/clojure-journey-ix-destructuring/
+
+;; just the 1st and 2nd value
+(let [[first second] data/coll-vec]
+  (println first second))
+
+;; get the deeply nested value in a map using destructuring
+(defn address-number [{{number :number} :address}]
+  (println number))
+
+(address-number data/deeply-nested)
+
+; using keys
+(defn address-number-k [{{:keys [number]} :address}]
+  (println number))
+
+(address-number-k data/deeply-nested)
+
+; with :or you can protect against not found, nil, when you want to work with a value <- very handy with JSON
+(defn get-doc [{:keys [doc] :or {doc "xxx"}}]
+  (println doc))
+
+(get-doc data/deeply-nested) ;; xxx
+
+; example of :or in deeply nested, even works when the first map is not found
+(defn get-zip [{{:keys [zip] :or {zip "1234AA"}} :address}]
+  (println zip))
+
+(get-zip data/deeply-nested)
