@@ -175,6 +175,8 @@
 
 (concat [:a :b] nil [1 [2 3] 4]) ; nil is not added
 
+(concat [1 2] [3 4])
+
 ;; take
 (take 3 data/coll-vec)
 
@@ -321,3 +323,27 @@
 (max-key peek ["Jon" 1] ["Rich" 6] ["Nancy" 3])
 (max-key count "asd" "bsd" "dsd" "long word")
 (apply max-key val {:a 3 :b 7 :c 9})
+
+;; merge - merge with the latest value for duplicates
+(merge
+ {:flintstone, ["Fred"], :rubble ["Barney"]}
+ {:flintstone, ["Wilma"], :rubble ["Betty"]}
+ {:flintstone, ["Pebbles"], :rubble ["Bam-Bam"]})
+
+(merge
+ {:a 1 :b 1}
+ {:a 2 :b 2}
+ {:a 3 :b 3})
+
+;; merge-with - merge with a function for duplicates
+(merge-with
+ concat
+ {:flintstone, ["Fred"], :rubble ["Barney"]}
+ {:flintstone, ["Wilma"], :rubble ["Betty"]}
+ {:flintstone, ["Pebbles"], :rubble ["Bam-Bam"]})
+
+(merge-with
+ +
+ {:a 1 :b 1}
+ {:a 2 :b 2}
+ {:a 3 :b 3})
