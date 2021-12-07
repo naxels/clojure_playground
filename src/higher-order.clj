@@ -110,6 +110,11 @@
 ; easy way to create an indexed vector from your coll
 (map-indexed vector (range 25))
 
+;; mapcat
+(mapcat reverse [[3 2 1 0] [6 5 4] [9 8 7]])
+
+(mapcat identity [[1 2 3] [4 5 6]])
+
 ;; filter
 (filter even? (range 10)) ; (0 2 4 6 8)
 
