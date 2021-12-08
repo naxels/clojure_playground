@@ -66,6 +66,15 @@
 
 #(- % (apply + %&))
 
+; destructure incoming args as map
+(defn fakemain
+  [& {:as args}]
+  [(keys args)
+   args])
+
+(fakemain :a 1 :b 2)
+(fakemain "-h" 1)
+
 ; :or and keyword arguments
 (defn make-user
   "return a map"
