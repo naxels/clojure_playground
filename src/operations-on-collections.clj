@@ -1,5 +1,6 @@
 (ns operations-on-collections
   (:require [clojure.test :refer [is]]
+            [custom-handy-fns :refer [associate-by]]
             data))
 
 ;; get
@@ -347,3 +348,17 @@
  {:a 1 :b 1}
  {:a 2 :b 2}
  {:a 3 :b 3})
+
+;; group-by - combine vals by key, always puts vals in vector
+(group-by :name data/persons)
+
+;; zipmap - takes keys and vals and puts them together in a map
+(zipmap (map :name data/persons) data/persons)
+
+(zipmap [:a :b :c :d :e] [1 2 3 4 5])
+
+; will stop when keys run out before vals
+(zipmap [:a :b :c] [1 2 3 4])
+
+; associate-by - same as group-by but use for 1-1 relationship, this will put key per val, no subcoll 
+(associate-by :name data/persons)
