@@ -360,5 +360,5 @@
 ; will stop when keys run out before vals
 (zipmap [:a :b :c] [1 2 3 4])
 
-; associate-by - same as group-by but use for 1-1 relationship, this will put key per val, no subcoll 
+;; associate-by - same as group-by but use for 1-1 relationship, this will put key per val, no subcoll 
 (associate-by :name data/persons)

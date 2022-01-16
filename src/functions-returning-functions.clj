@@ -231,3 +231,10 @@
 (reduce + (map (constantly 1) [:a :b :c]))
 
 (map (constantly 9) [1 2 3])
+
+;; fnil - Takes a function and returns a function that calls f, replacing a nil first arg to f with the supplied value
+; (inc nil) - won't work
+((fnil inc 0) nil)
+
+(update-in {:a 1} [:b] (fnil inc 0)) ; because doesn't exist uses 0
+(update-in {:a 1} [:a] (fnil inc 0)) ; exists and uses 1 from :a
