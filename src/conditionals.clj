@@ -53,6 +53,16 @@
 (sublist-if-empty false 1)
 (sublist-if-empty [2] 1)
 
+;; not=
+(not= 1 1 1 1 1 1) ; false
+
+(not= 1 1 1 1 1 2) ; true
+
+(apply not= '(1 1 1 1 1 1)) ; false
+
+(let [a 1]
+  (apply not= (list 2 2 2 2 2 2 a))) ; true
+
 ;; if-let
 ; assign let when truthy
 
