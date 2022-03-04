@@ -129,7 +129,7 @@
 (assoc-in data/articles [2 :ads 1] 3) ; 2nd index, :ads key, 1st index, update to 3
 ;; (assoc-in articles [2 :ads 4] 3) ; index out of bounds
 
-;; dissoc
+;; dissoc remove key(s) from map
 (dissoc data/coll-map :z) ; not found key just returns the coll
 (dissoc data/coll-map :a)
 
