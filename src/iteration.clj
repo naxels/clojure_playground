@@ -30,6 +30,7 @@
    :kf    (fn [[_name parents]] (parent-kw parents))
    :initk person-name))
 
+; seq realizes the lazy seq
 (seq (ancestors-of data/people :dad "Carl"))
 
 (seq (ancestors-of data/people :mom "Carl"))
