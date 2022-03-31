@@ -213,7 +213,7 @@
 ; much easier to read:
 ; #(= (hash-set (:winner_name %) (:loser_name %))
 ;     #{"Roger Federer" "Rafael Nadal"})
-    
+
 ;; partition
 (partition 1 data/coll-vec)
 (partition 2 data/coll-vec)
@@ -262,7 +262,7 @@
 (sort-by #(- (:created_at %)) data/unordered)
 
 ; can also be done with a comparator:
-(defn descending 
+(defn descending
   "sort descending"
   [a b]
   (compare b a))
@@ -362,3 +362,13 @@
 
 ;; associate-by - same as group-by but use for 1-1 relationship, this will put key per val, no subcoll 
 (associate-by :name data/persons)
+
+;; find - Returns the map entry for key, or nil if key not present.
+(find data/people "Carl")
+(find data/people "Peter")
+
+;; key - Returns the key of the map entry.
+(key (find data/people "Carl"))
+
+;; val - Returns the value in the map entry.
+(val (find data/people "Carl"))
