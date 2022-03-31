@@ -24,7 +24,7 @@
                 {:name "jaap" :purchases [{:total 10}
                                           {:total 20}
                                           {:total 30}]}])
-
+; array of maps
 (def articles
   [{:title "Another win for India"
     :date "2017-11-23"
@@ -56,12 +56,26 @@
              :bike "Giant"
              :house :rental})
 
+; array of maps
 (def persons [{:name "Romeo"
                :age 16
                :gender :male
                :bike "Giant"
                :house :rental}
               {:name "Piet"}])
+
+; map of maps
+(def people
+  {"Carl"   {:mom "Sofia"
+             :dad "Thomas"}
+   "Sofia"  {:mom "Elena"
+             :dad :unknown}
+   "Dexter" {:mom :unknown
+             :dad :unknown}
+   "Thomas" {:mom :unknown
+             :dad "Dexter"}
+   "Elena"  {:mom :unknown
+             :dad :unknown}})
 
 ; map with subtree
 (def hospital
@@ -79,6 +93,7 @@
               :salary 0
               :position :volunteer}}})
 
+; list of maps
 (def unordered '({:created_at 1612637437}
                  {:created_at 1610998684}
                  {:created_at 1622245799}))
