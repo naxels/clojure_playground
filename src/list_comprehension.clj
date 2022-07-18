@@ -1,5 +1,4 @@
-(ns list-comprehension
-  (:require #_[clojure.test :refer [is]]))
+(ns list-comprehension)
 
 ;; for
 ;; 
@@ -17,6 +16,20 @@
 (for [x ['a 'b 'c]
       y [1 2 3]]
   [x y])
+
+; For each x, generate all y's and z's
+(for [x ['a 'b 'c]
+      y [1 2 3]
+      z (range 2)]
+  [x y z])
+
+; For each first number generate all other numbers and so forth
+(count (for [a1 (range 10)
+             a2 (range 10)
+             a3 (range 10)
+             a4 (range 10)
+             a5 (range 10)]
+         (+ a1 a2 a3 a4 a5))) ; 10 * 10 * 10 * 10 * 10 = 100000
 
 (for [x1 [1 2 3]
       x2 [1 2 3]]
@@ -61,11 +74,39 @@
       :while (not= x y)]
   [x y])
 
+; :while in between x and y
 (for [x (range 3)
-      :while (not= x 1) ; this will cause the while to stop on x and not even consider y
+      :while (not= x 1) ; this will cause the while to stop on x as soon as x turns to 1
       y (range 3)]
+  [x y])
+
+; vs this will skip x = 1 but show x = 2
+(for [x (range 3)
+      y (range 3)
+      :while (not= x 1)]
+  [x y])
+
+; inline multiple :while
+(for [x (range) :while (< x 10)
+      y (range) :while (<= y x)]
   [x y])
 
 ; destruct
 (for [[_k v] {:a 1 :b 2 :c 3}]
   v)
+
+; Easy iteration through nested vectors
+(for [row [["a" "b"] ["c" "d"]]
+      letter row]
+  letter)
+
+; vs mapcat example:
+(for [i (range 1 14)
+      a ["D" "C" "H" "S"]
+      :let [card (str i "-" a)]]
+  card)
+
+(mapcat (fn [i] 
+          (map (fn [a] (str i "-" a)) 
+               ["D" "C" "H" "S"])) 
+        (range 1 14))
