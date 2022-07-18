@@ -336,18 +336,36 @@
  {:a 2 :b 2}
  {:a 3 :b 3})
 
-;; merge-with - merge with a function for duplicates
-(merge-with
- concat
- {:flintstone, ["Fred"], :rubble ["Barney"]}
- {:flintstone, ["Wilma"], :rubble ["Betty"]}
- {:flintstone, ["Pebbles"], :rubble ["Bam-Bam"]})
+;; merge-with - merge with a function for how to handle duplicates
+(merge-with concat
+            {:flintstone, ["Fred"], :rubble ["Barney"]}
+            {:flintstone, ["Wilma"], :rubble ["Betty"]}
+            {:flintstone, ["Pebbles"], :rubble ["Bam-Bam"]})
 
-(merge-with
- +
- {:a 1 :b 1}
- {:a 2 :b 2}
- {:a 3 :b 3})
+(merge-with +
+            {:a 1 :b 1}
+            {:a 2 :b 2}
+            {:a 3 :b 3}
+            {:b 1 :c 1})
+
+(merge-with into
+            {"Lisp" ["Common Lisp" "Clojure"]
+             "ML" ["Caml" "Objective Caml"]}
+            {"Lisp" ["Scheme"]
+             "ML" ["Standard ML"]})
+
+; this won't work: it conj's the entire vec into the original vec, creating a subvec
+(merge-with conj
+            {"Lisp" ["Common Lisp" "Clojure"]
+             "ML" ["Caml" "Objective Caml"]}
+            {"Lisp" ["Scheme"]
+             "ML" ["Standard ML"]})
+
+; using an apply when working on coll of maps:
+(apply merge-with concat
+       '({:flintstone, ["Fred"], :rubble ["Barney"]}
+         {:flintstone, ["Wilma"], :rubble ["Betty"]}
+         {:flintstone, ["Pebbles"], :rubble ["Bam-Bam"]}))
 
 ;; group-by - combine vals by key, always puts vals in vector
 (group-by :name data/persons)
