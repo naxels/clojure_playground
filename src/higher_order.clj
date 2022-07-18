@@ -115,6 +115,21 @@
 
 (mapcat identity [[1 2 3] [4 5 6]])
 
+; mapcat example vs map vs apply concat
+(mapcat reverse [[3 2 1 0] [6 5 4] [9 8 7]])
+; vs just map
+(map reverse [[3 2 1 0] [6 5 4] [9 8 7]])
+; essentialy is doing this with map
+(apply concat (map reverse [[3 2 1 0] [6 5 4] [9 8 7]]))
+
+; @hiredman on Clojure Slack said: when I see a mapcat with a map in the fn, I think for!
+(is (= (mapcat (fn [{:keys [categories] :as post}]
+                 (map (fn [category] [category post]) categories))
+               data/posts)
+       (for [{:keys [categories] :as post} data/posts
+             category categories]
+         [category post])))
+
 ;; filter
 (filter even? (range 10)) ; (0 2 4 6 8)
 
