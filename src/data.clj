@@ -24,7 +24,7 @@
                 {:name "jaap" :purchases [{:total 10}
                                           {:total 20}
                                           {:total 30}]}])
-; array of maps
+; vector of maps
 (def articles
   [{:title "Another win for India"
     :date "2017-11-23"
@@ -56,7 +56,7 @@
              :bike "Giant"
              :house :rental})
 
-; array of maps
+; vector of maps
 (def persons [{:name "Romeo"
                :age 16
                :gender :male
@@ -101,6 +101,24 @@
 (def list-one '(1 2 3 4 5 6 7 8 9 0))
 (def list-two '(1 2 3 4 5 5 6 6 9 0))
 (def list-vec-combined '([:a :b] [:b :b] [:a :c] [:c :c] [:d :d]))
+
+; list of maps with a sub set
+(def posts '({:title "Blambda!"
+              :file "2022-07-03-blambda.md"
+              :categories #{"aws" "s3" "lambda" "clojure"}
+              :date "2022-07-03"}
+             {:title "Dogfooding Blambda! : revenge of the pod people"
+              :file "2022-07-04-dogfooding-blambda-1.md"
+              :categories #{"aws" "s3" "lambda" "clojure" "blambda"}
+              :date "2022-07-04"}
+             {:title "Hacking the blog: favicon"
+              :file "2022-07-05-hacking-blog-favicon.md"
+              :categories #{"clojure" "blog"}
+              :date "2022-07-05"}
+             {:title "Hacking the blog: categories"
+              :file "2022-07-06-hacking-blog-categories.md"
+              :categories #{"clojure" "blog"}
+              :date "2022-07-06"}))
 
 (def deeply-nested {:name "Otavio"
                     :last-name "Valadares"
