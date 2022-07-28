@@ -71,3 +71,9 @@ yy
 ; (remove-tap prn)
 ; (remove-tap clojure.pprint/pprint)
 ; (remove-tap inspect-tree)
+
+; debug inside anonymous fn:
+; #(inc (doto % println)))
+; #(do 
+;   (println ...)
+;   (inc %))
