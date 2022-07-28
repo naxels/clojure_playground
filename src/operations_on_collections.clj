@@ -114,6 +114,8 @@
 
 (assoc [1 2 5 6 8 9] 2 100) ; another example of replace vector index with val
 
+(assoc nil :a :b) ; nil is seen as empty map
+
 ; for using with reduce:
 (defn lookup [id] ; a function can easily return a map
   {:index "backup"
@@ -369,6 +371,10 @@
 
 ;; group-by - combine vals by key, always puts vals in vector
 (group-by :name data/persons)
+
+(group-by (fn [i]
+            (mod i 3))
+          (range 20))
 
 ;; zipmap - takes keys and vals and puts them together in a map
 (zipmap (map :name data/persons) data/persons)
