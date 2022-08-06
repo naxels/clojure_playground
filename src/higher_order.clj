@@ -115,6 +115,11 @@
 
 (mapcat identity [[1 2 3] [4 5 6]])
 
+; fast way to get all vals in a map concat:
+(mapcat vals data/persons)
+; with map you would get a new seq for each entry
+(map vals data/persons)
+
 ; mapcat example vs map vs apply concat
 (mapcat reverse [[3 2 1 0] [6 5 4] [9 8 7]])
 ; vs just map
