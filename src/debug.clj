@@ -1,6 +1,7 @@
 (ns debug
   (:require [data]
-            [clojure.inspector :refer [inspect-tree]]))
+            [clojure.inspector :refer [inspect-tree]]
+            [clojure.tools.trace :as trace]))
 
 ; use prn
 (defn foo-prn [x]
@@ -52,6 +53,7 @@ yy
 ; (add-tap clojure.pprint/pprint)
 ; (add-tap inspect-tree)
 ; make sure to add at least 1!
+(add-tap prn)
 
 ; tap> outputs to all added taps
 (tap> "hello world")
@@ -71,9 +73,81 @@ yy
 ; (remove-tap prn)
 ; (remove-tap clojure.pprint/pprint)
 ; (remove-tap inspect-tree)
+(remove-tap prn)
 
 ; debug inside anonymous fn:
-; #(inc (doto % println)))
-; #(do 
-;   (println ...)
-;   (inc %))
+(#(inc %) 1) ; this won't show before data
+
+(#(inc (doto % println)) 1) ; this shows before and after
+; using do:
+(#(do
+    (println %)
+    (inc %))
+ 1)
+
+(defn dbg
+  "print input & return input"
+  [data]
+  (println data)
+  data)
+
+(def dbg2 #(doto % println))
+
+; debug intermediate steps in threading:
+(-> data/hospital
+    (:staff)
+    (keys)
+    (doto tap>) ; with data as first param, this works
+    (dbg) ; works
+    (dbg2) ; works
+    #_(println) ; won't work because return is nil
+    (doto println) ; this now works, again data as first param
+    (first))
+
+(->> data/hospital
+     (:staff)
+     (keys)
+     #_(println) ; this won't work as println returns nil
+     #_#(doto % println) ; this doesn't work either
+     #_(tap>) ; this doesn't work either as it won't return the data, but boolean
+     (#(doto % println)) ; with double parens & anonymous fn, it works
+     (#(doto % tap>)) ; works as well
+     (dbg) ; works
+     (dbg2) ; works
+     (first))
+
+; using tracing
+(trace/trace "data" ; providing a name
+ (-> data/hospital
+     (:staff)
+     (keys)
+     (first)))
+
+; using a deftrace fn
+(trace/deftrace idntty [x] x)
+
+(-> data/hospital
+    (idntty)
+    (:staff)
+    (idntty)
+    (keys)
+    (idntty)
+    (first))
+
+; trace within threading
+(-> data/hospital
+    (:staff)
+    (keys)
+    (trace/trace) ; without name
+    #_(trace/trace "keys") ; won't work!
+    (#(trace/trace "keys" %)) ; this works with double parens
+    #_#(trace/trace "keys" %) ; won't work
+    (first))
+
+(->> data/hospital
+     (:staff)
+     (keys)
+     (trace/trace) ; without name
+     (trace/trace "keys") ; with name
+     (#(trace/trace "keys" %)) ; as anon fn with name
+     (first))
