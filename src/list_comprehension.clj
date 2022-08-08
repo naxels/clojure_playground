@@ -110,3 +110,7 @@
           (map (fn [a] (str i "-" a)) 
                ["D" "C" "H" "S"])) 
         (range 1 14))
+
+; easy indexed generator
+(for [[i item] (map-indexed vector '(aap noot mies))]
+  [:li {:key i} item])
