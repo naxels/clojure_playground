@@ -396,3 +396,9 @@
 
 ;; val - Returns the value in the map entry.
 (val (find data/people "Carl"))
+
+;; butlast
+(butlast data/people)
+(butlast data/list-one)
+(butlast '()) ; nil
+(butlast '(1)) ; nil
