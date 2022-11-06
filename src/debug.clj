@@ -123,6 +123,14 @@ yy
      (keys)
      (first)))
 
+; trace a var or fn:
+(trace/trace-vars +)
+
+(apply + (range 5))
+
+; untrace again
+(trace/untrace-vars +)
+
 ; using a deftrace fn
 (trace/deftrace idntty [x] x)
 
