@@ -31,3 +31,10 @@
 
 ; sequence - lazy transducing
 (sequence inc-odd (range 10))
+
+; completing - make a transduce compatible fn
+(transduce (map inc)
+           (completing (fn [[sum cnt] x] [(+ sum x) (inc cnt)]) ; f
+                       (fn [[sum cnt]] (/ sum cnt)))            ; cf
+           [0 0]
+           (range 7))
