@@ -3,6 +3,8 @@
 ; lists
 (def candy '("chocolate" "jelly" "mint"))
 (def kids '("Mike" "Anna" "Ted" "Mary" "Alex" "Emma" "Piet"))
+(def firstnames kids)
+(def lastnames '("van Dijk" "Verbeek" "Pannenkoek" "Vollehoven" "Rossum"))
 
 ; vectors
 (def coll-vec [1 2 3 4 5 6 7 8 9 0 15])
