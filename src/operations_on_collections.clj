@@ -402,3 +402,25 @@
 (butlast data/list-one)
 (butlast '()) ; nil
 (butlast '(1)) ; nil
+
+;; interleave - Returns a lazy seq of the first item in each coll, then the second etc.
+; lazy seq of :fruit "grape" etc
+(interleave [:fruit :color :temp]
+            ["grape" "red" "hot"])
+
+; turn into map
+(apply assoc {}
+       (interleave [:fruit :color :temp]
+                   ["grape" "red" "hot"]))
+
+;; interpose - Returns a lazy seq of the elements of coll separated by sep.
+(interpose ", " ["one" "two" "three"])
+
+; turn to string:
+(apply str (interpose ", " ["one" "two" "three"]))
+
+; alternatively use clojure.string/join without interpose
+
+; example usage:
+; - create csv with ,
+; - create markdown table row with \|
