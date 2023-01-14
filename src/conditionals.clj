@@ -25,6 +25,16 @@
     0) ; else return 0
   )
 
+; great check for nil value then take other value
+(let [n nil]
+  (inc (or n 0)))
+
+; equivalent of
+(let [n nil]
+  (if n
+    (inc n)
+    (inc 0)))
+
 ;; =
 (let [a 0
       b 0]
