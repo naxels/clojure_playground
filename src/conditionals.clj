@@ -31,9 +31,15 @@
 
 ; equivalent of
 (let [n nil]
-  (if n
-    (inc n)
-    (inc 0)))
+  (inc (if n
+         n
+         0)))
+
+; another way that duplicates inc
+;; (let [n nil]
+;;   (if n
+;;     (inc n) ; clj-kondo: type error
+;;     (inc 0)))
 
 ;; =
 (let [a 0
