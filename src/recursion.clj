@@ -190,26 +190,13 @@
    [0 1]))
 
 ; using coll input
-;; (defn sum_upto_coll ; tried to do it Elixir style, doesn't work
-;;   [head & rest]
-;;   (if (empty? rest)
-;;    rest
-;;    (+ head (sum_upto_coll rest))))
-
-;; (defn sum_upto_coll
-;;   ([vals] (sum vals 0))
-;;   ([vals acc]
-;;    (if (empty? vals)
-;;      acc
-;;      (recur (rest vals) (+ (first vals) acc)))))
-
 ; destructure head and tail in func args
 (defn sum_upto_coll
-  ([vals] (sum vals 0))
+  ([vals] (sum_upto_coll vals 0))
   ([[head & tail] acc]
-   (if (empty? vals)
-     acc
-     (recur tail (+ head acc)))))
+   (if head
+     (recur tail (+ head acc))
+     acc)))
 
 (is (= 55
        (sum_upto_plus 10)
