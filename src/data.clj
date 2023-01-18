@@ -79,6 +79,9 @@
    "Elena"  {:mom :unknown
              :dad :unknown}})
 
+(def map-of-map-vec {1 {:good [1 2] :bad [3 4]}
+                     2 {:good [5 6] :bad [7 8]}})
+
 ; map with subtree
 (def hospital
   {:hospital "Hans Jopkins"
