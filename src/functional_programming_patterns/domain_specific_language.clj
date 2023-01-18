@@ -77,3 +77,6 @@
 (def-command pwd "pwd")
 
 (pwd)
+
+(def-pipe pipeline "ls" "ls -lha")
+(pipeline)
