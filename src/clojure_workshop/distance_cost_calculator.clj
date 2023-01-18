@@ -1,4 +1,4 @@
-(ns distance-cost-calculator
+(ns clojure-workshop.distance-cost-calculator
   (:require [clojure.test :refer [is]]))
 
 (def walking-speed 4) ; exercise says 5 however all tests are setup for 4

@@ -1,4 +1,4 @@
-(ns clojure-workshop.nested-date)
+(ns clojure-workshop.nested-data)
 
 ; Ex 2.06
 

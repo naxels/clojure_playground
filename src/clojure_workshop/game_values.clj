@@ -1,4 +1,4 @@
-(ns game-values)
+(ns clojure-workshop.game-values)
 
 (def game-users
   [{:id 9342
