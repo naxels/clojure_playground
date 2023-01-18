@@ -1,5 +1,5 @@
 (ns functional-thinking.4
-  (:require [clojure.string :refer [join split]]))
+  (:require [clojure.string :refer [split]]))
 
 
 ; rot13 with memoize

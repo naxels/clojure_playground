@@ -1,6 +1,5 @@
 (ns parse-clojure-toc
-  (:require [clojure.java.io :as io]
-            [clojure.xml :as xml]
+  (:require [clojure.xml :as xml]
             [clojure.inspector :refer [inspect-tree]]))
 ;   (:require [clojure.data.xml :refer [parse-str]]))
 
@@ -15,7 +14,7 @@
 ;       xml-seq))
       
 ; (def document (xml/parse (io/reader "Clojure_The_Essential_Reference_v29_MEAP.xml")))
-(def document (xml/parse "Clojure_The_Essential_Reference_v29_MEAP.xml"))
+(def document (xml/parse "Clojure_The_Essential_Reference_v31_MEAP.xml"))
 
 (def chapters
   (->> document
@@ -41,4 +40,5 @@
 
 (comment
   (inspect-tree document)
-  (inspect-tree chapters))
+  (inspect-tree chapters)
+  (inspect-tree chapters-with-digits))
