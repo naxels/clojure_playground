@@ -1,6 +1,9 @@
 ; list functions of namespace:
 (dir clojure.string)
 
+; list of each public clojure function in core:
+(ns-publics 'clojure.core)
+
 ; ignore expression
 #_(expression)
 
