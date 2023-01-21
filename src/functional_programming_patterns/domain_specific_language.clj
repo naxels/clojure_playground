@@ -74,6 +74,9 @@
 
 ((pipe-commands "ls" "grep README"))
 
+(declare pwd) ; clj-kondo fix
+(declare pipeline) ; clj-kondo fix
+
 (def-command pwd "pwd")
 
 (pwd)
