@@ -1,7 +1,11 @@
 (ns debug
+  ;; {:clj-kondo/config '{:linters {:unresolved-symbol {:level :off}}}}
+  {:clj-kondo/config '{:lint-as {clojure.tools.trace/deftrace clojure.core/defn}}}
   (:require [data]
             [clojure.inspector :refer [inspect-tree]]
             [clojure.tools.trace :as trace]))
+
+;; (declare idntty) ; clj-kondo fix ; not needed with above :clj-kondo/config :lint-as
 
 ; use prn
 (defn foo-prn [x]
