@@ -78,21 +78,21 @@ posts-step-3-reduce
 ; NOT DONE YET..
 
 ; STEP 2&3 in 1 go
-(reduce (fn [acc {:keys [categories] :as post}]
-          #_(loop [[category & categories] categories] ; doesn't work as assoc/return isn't the last call of the loop
-              (when category
-                (do (assoc acc category post)
-                    (recur categories))))
-          #_(let [category (first categories)] ; only takes first category
-              (assoc acc category post))
-          #_(loop [category (first categories)] ; endless loop
-              (println category)
-              (when category
-                (do
-                  (assoc acc category post)
-                  (recur (next categories))))))
-        {}
-        posts-step1-sorted)
+;; (reduce (fn [acc {:keys [categories] :as post}]
+;;           #_(loop [[category & categories] categories] ; doesn't work as assoc/return isn't the last call of the loop
+;;               (when category
+;;                 (do (assoc acc category post)
+;;                     (recur categories))))
+;;           #_(let [category (first categories)] ; only takes first category
+;;               (assoc acc category post))
+;;           #_(loop [category (first categories)] ; endless loop
+;;               (println category)
+;;               (when category
+;;                 (do
+;;                   (assoc acc category post)
+;;                   (recur (next categories))))))
+;;         {}
+;;         posts-step1-sorted)
 
 ; turn 1 post into a dataset of each category found in set containing the post
 (let [post (first posts-step1-sorted)]
