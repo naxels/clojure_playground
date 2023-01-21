@@ -42,3 +42,9 @@
 (print-flight-vec [[48.9615, 2.4372], [37.742 -25.6976]])
 
 (map print-mapjet-flight-arg-destruct (:flights mapjet-booking))
+
+(comment
+  (let [x (first (:flights mapjet-booking))]
+    (print-mapjet-flight x)
+    (print-mapjet-flight-associate-destruct x))
+  )
