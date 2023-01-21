@@ -38,9 +38,6 @@
 (defn qualify [kw]
   (keyword xml-ns (name kw)))
 
-;; (qualify :location)
-;; => :xmlns.http%3A%2F%2Fxml.weather.yahoo.com%2Fns%2Frss%2F1.0/location
-
 ; Easier namespaces than function/translation:
 ;; https://github.com/clojure/data.xml#namespace-support
 ;; Emitting namespaced XML is usually done by using alias-uri 
@@ -100,3 +97,8 @@
 (dorun (map #(is (= (.toUpperCase %) (letter-grade %))) ["A" "B" "C" "D" "F" "a" "b" "c" "d" "f"]))
 ; test not found letter
 (is (= nil (letter-grade "G")))
+
+(comment
+  (qualify :location)
+  ;; => :xmlns.http%3A%2F%2Fxml.weather.yahoo.com%2Fns%2Frss%2F1.0/location
+  )
