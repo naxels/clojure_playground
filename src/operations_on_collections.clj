@@ -424,3 +424,38 @@
 ; example usage:
 ; - create csv with ,
 ; - create markdown table row with \|
+
+;; not-any?
+(not-any? odd? data/test-coll)
+
+(not-any? int? data/candy)
+(not-any? int? data/user-info)
+
+(not-any?   #(= "query"  %)   (list "hola" "query" "fin"))   ;false
+(not-any?   #(= "query"  %)   (list "hola" "fin"))           ;true
+(not-any?   #(= "query"  %)   (list))                        ;true
+(not-any?   #(= "query"  %)   nil)                           ;true
+(not-any?   #(= "query"  %)   '())                           ;true
+
+; alternative that can be faster:
+; from https://narimiran.github.io//2023/01/17/advent-of-clojure.html
+
+(defn none?
+  [pred xs]
+  (reduce (fn [acc x]
+            (if (pred x)
+              (reduced false) ; stops reduce and returns false
+              acc))
+          true
+          xs))
+
+(none? odd? data/test-coll)
+
+(none? int? data/candy)
+(none? int? data/user-info)
+
+(none?   #(= "query"  %)   (list "hola" "query" "fin"))   ;false
+(none?   #(= "query"  %)   (list "hola" "fin"))           ;true
+(none?   #(= "query"  %)   (list))                        ;true
+(none?   #(= "query"  %)   nil)                           ;true
+(none?   #(= "query"  %)   '())                           ;true
