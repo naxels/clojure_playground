@@ -1,4 +1,4 @@
-(ns puzzels.christmas-tree)
+(ns puzzles.christmas-tree)
 
 ; loop
 (defn calculate-tree

@@ -1,4 +1,4 @@
-(ns puzzels.prime)
+(ns puzzles.prime)
 
 ; from: https://clojure-diary.gitlab.io/2022/10/02/finding-primes-from-1-to-100-in-clojure.html
 

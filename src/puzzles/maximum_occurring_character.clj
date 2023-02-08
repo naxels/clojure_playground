@@ -1,4 +1,4 @@
-(ns puzzels.maximum-occurring-character)
+(ns puzzles.maximum-occurring-character)
 
 ;; HackerRank
 
