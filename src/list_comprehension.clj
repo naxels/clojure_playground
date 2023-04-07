@@ -38,11 +38,22 @@
 (for [x (range 6)]
   (* x x))
 
-; when ; is filtering
+; :when is for filtering
 (for [x [0 1 2 3 4 5]
       :let [y (* x 3)]
       :when (even? y)]
   y)
+
+; generate all possible combinations for
+; nr starting at 1 until length of coll
+; and nr2 from 0 until nr
+; it's like looping for each nr, for each nr2...
+(let [coll '(10 11 12 13 14)]
+  (for [nr (range 1 (count coll))
+        nr2 (range nr)]
+    #_[(coll nr2) (coll nr)] ; <- works for vectors
+    [(nth coll nr2) (nth coll nr)] ; <- works for lists
+    ))
 
 ; https://clojuredocs.org/clojure.core/for#example-542692d3c026201cdc326fa7
 (for [x (range 3)
@@ -54,7 +65,7 @@
       :when (-> x first keyword?)]
   x)
 
-; while ; is stopping when encountered
+; :while is stopping when encountered
 ; https://clojuredocs.org/clojure.core/for#example-542692d3c026201cdc326fa7
 ; > the reason it gives ([1 0] [2 0] [2 1])
 ; is because it stops at the first sign of the condition, so:
