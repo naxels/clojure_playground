@@ -35,12 +35,11 @@
 ; same example with ->>
 (defn camel->keyword
   [s]
-  (->>
-   (str/split s #"(?<=[a-z])(?=[A-Z])")
-   (map str/lower-case)
-   (interpose \-)
-   str/join
-   keyword))
+  (->> (str/split s #"(?<=[a-z])(?=[A-Z])")
+       (map str/lower-case)
+       (interpose \-)
+       str/join
+       keyword))
 
 (is (= :camel-case (camel->keyword "CamelCase")))
 
@@ -56,27 +55,31 @@
 ; (:a {data}) , (:b {data}) , then combine
 
 (apply (juxt + *) [1 2]) ; apply first + then * to data set
-;same as:
+;same as vec:
 [(apply + [1 2]) (apply * [1 2])]
 
 ; Get the first, last character and length of string
 (is (= [\C \s 13] ((juxt first last count) "Clojure Rocks")))
 
 ; simple design salary transformer to demonstrate juxt
-(defn salary-monthly->yearly [salary]
+(defn salary-monthly->yearly
+  [salary]
   (* salary 12))
 
-(defn salary-monthly->weekly [salary]
+(defn salary-monthly->weekly
+  [salary]
   (-> salary ; -> is do as first argument, ->> as last
       (salary-monthly->yearly)
       (/ 52)))
 
-(defn salary-monthly->daily [salary]
+(defn salary-monthly->daily
+  [salary]
   (-> salary
       (salary-monthly->weekly)
       (/ 5)))
 
-(defn salary-monthly->hourly [salary]
+(defn salary-monthly->hourly
+  [salary]
   (-> salary
       (salary-monthly->daily)
       (/ 8)))
@@ -119,6 +122,8 @@
 ;; (make-inc 2) ; doesn't work since make-inc doesn't take args
 (def my-inc (make-inc)) ; gets the func from make-inc and assigns it to my-inc
 (my-inc 2) ; 3
+; invoke like this without assignment:
+((make-inc) 2)
 
 (defn make-inc-with-arg
   [x]
@@ -128,23 +133,6 @@
 (def inc-8 (make-inc-with-arg 8))
 (inc-5 5) ; 10
 (inc-8 5) ; 13
-
-; function as argument
-(defn test-and-inc
-  [tst-fn x]
-  (if (tst-fn x)
-    (inc x)
-    x))
-
-(test-and-inc odd? 3) ; 4
-(test-and-inc odd? 4) ; 4
-
-(defn my-apply-two
-  [f1 f2 arg]
-  (f1 (f2 arg)))
-
-(my-apply-two inc inc 5) ; 7
-(my-apply-two inc #(* 5 %) 5) ; 26
 
 (defn my-comp [f1 f2]
   (fn [arg] (f1 (f2 arg))))
@@ -238,3 +226,16 @@
 
 (update-in {:a 1} [:b] (fnil inc 0)) ; because doesn't exist uses 0
 (update-in {:a 1} [:a] (fnil inc 0)) ; exists and uses 1 from :a
+
+; strategy pattern
+(defn decider
+  [inp]
+  (case inp
+    "square" #(* % %)
+    "cube" #(* % % %)
+    "exponential" #(* 2 %) ; f(x) = ax | a = 2
+    identity)) ; default
+
+((decider "square") 4)
+((decider "exponential") 4)
+((decider "dummy") 4)

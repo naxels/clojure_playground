@@ -149,8 +149,8 @@
 
 ;; example of a function taking function as argument
 (defn total_price
-  [price fee]
-  (+ price (fee price)))
+  [price f-fee]
+  (+ price (f-fee price)))
 
 (defn flat_fee
   [_price]
@@ -204,3 +204,92 @@
 (total-prices-transduce (map #(* 2 %)) prices)
 
 (total-prices-transduce (take 3) prices)
+
+; function as argument
+(defn test-and-inc
+  [tst-fn x]
+  (if (tst-fn x)
+    (inc x)
+    x))
+
+(test-and-inc odd? 3) ; 4
+(test-and-inc odd? 4) ; 4
+
+; function runner examples
+
+(defn function-runner
+  "left-to-right, needs arg
+   this really is a reducing pattern 
+   where you call each function on the result of prev function call
+   essentially same as -> or other threading fn's when not fn's in coll"
+  ([arg f] (f arg))
+  ([arg f g] (g (f arg)))
+  ([arg f g h] (h (g (f arg))))
+  ([arg f g h i] (-> (f arg) (g) (h) (i)))
+  ([arg f g h i j] (-> (f arg) (g) (h) (i) (j))))
+
+(defn function-runner-reduc
+  "issue: on calling self (next fs) = list! which using & fs turns into a list of list
+   resolve:
+   - add another fn and call that without &
+   - on first input, have all fs in a list/vec and remove &
+   - don't call self, use loop/recur - see function-runner-loop
+   - use reduce - see function-runner-reduce
+   - with comp - see function-runner-comp"
+  [arg & fs]
+  ;; (println arg)
+  ;; (println fs)
+  (let [flat (flatten fs)
+        ; f (first flat)
+        ; n (next flat)
+        [f & n] flat ; destructure
+        ] ; use next, not rest
+    ;; (println flat)
+    ;; (println f)
+    ;; (println n)
+    (if f
+      (function-runner-reduc (f arg) n)
+      arg)))
+
+(defn function-runner-loop
+  [arg & fs]
+  (loop [rs arg
+         fs-coll fs]
+    (let [;f (first fs-coll)
+          [f & n] fs-coll]
+      (if f ; could also do if-let & assign right away if f
+        (recur (f rs) n); (next fs-coll))
+        rs))))
+
+; with reduce: assign result of (f rs) to rs every time for coll of fs
+(defn function-runner-reduce
+  [arg & fs]
+  (reduce (fn [rs f] (f rs)) arg fs))
+
+(defn function-runner-comp
+  "create comp fn with reverse of fs then call on arg"
+  [arg & fs]
+  ((apply comp (reverse fs)) arg))
+
+; create a fn that will run all function-runner's separately
+(def fr (juxt function-runner
+              function-runner-reduc
+              function-runner-loop
+              function-runner-reduce
+              function-runner-comp))
+
+(fr 10 inc)
+(fr 10 inc dec)
+(fr 10 inc dec)
+(fr 10 #(* % %))
+(fr 10 #(* % %) #(/ % 2))
+(fr 10 #(* % %) #(/ % 2) #(+ % 9))
+(fr 10 #(* % %) #(/ % 2) #(+ % 9) #(- % 33))
+
+; another example of fn caller
+(defn my-apply-two
+  [f1 f2 arg]
+  (f1 (f2 arg)))
+
+(my-apply-two inc inc 5) ; 7
+(my-apply-two inc #(* 5 %) 5) ; 26

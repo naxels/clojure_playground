@@ -142,12 +142,7 @@
 (def mapping-inc-+ ((mapping inc) +))
 
 (reduce mapping-inc-+ 0 [1 2 3 4])
-
 ; Benefit = decoupling transformation from collection
-
-; reducer is going to accept a collection coll and a transformation function xf,
-; and return a reducer that provides data to the reduce function.
-(reduce + 0 (r/reducer [1 2 3 4] (mapping inc)))
 
 (defn my-reducer
   "Given a reducible collection, and a transformation function xf,
