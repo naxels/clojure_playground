@@ -293,3 +293,19 @@
 
 (my-apply-two inc inc 5) ; 7
 (my-apply-two inc #(* 5 %) 5) ; 26
+
+; very simple Higher Order example:
+(defn two
+  "call f with arg 2"
+  [f]
+  (f 2))
+
+(two #(* % %)) ; square
+(two #(* % % %)) ; cube
+(two range) ; generate range
+(two #(take % (repeat 1))) ; generate seq of 1's
+(two #(* 2 %)) ; exponential to the power of 2
+(two identity) ; return arg
+(two str) ; turn to string
+(two #(conj [] %)) ; turn to vec
+(two #(nth [9 8 7 6] %)) ; get value at index
