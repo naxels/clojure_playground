@@ -22,12 +22,15 @@
 
 ; getting the first matching value
 ;; https://stackoverflow.com/a/10192733/ ; due to lazy, defn find-first will not process entire coll
+;; NOTE: filter does chunking..
 (defn find-first
-  [f coll]
-  (first (filter f coll)))
+  [pred coll]
+  (first (filter pred coll)))
 
 (is (= 6 (find-first #(> % 5) data/coll-vec)))
 ; vs, some
+; proposal by borkdude for this in Clojure.core because (first (filter)) does chunking
+; https://ask.clojure.org/index.php/12155/function-returns-sequential-collection-matching-predicate
 (is (= 6 (some #(when (> % 5) %) data/coll-vec)))
 ; vs, reduce is faster they say on larger infinite colls
 (is (= 6 (reduce #(when (> %2 5) (reduced %2)) nil data/coll-vec)))
