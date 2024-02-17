@@ -133,3 +133,12 @@
                               :state :sp
                               :street "Xpto Street"
                               :number "42"}})
+
+(def xml-example "<balance>
+                    <accountId>3764882</accountId>
+                    <currentBalance>80.12389</currentBalance>
+                    <contract>
+                      <contractId>77488</contractId>
+                      <currentBalance>1921.89</currentBalance>
+                    </contract>
+                  </balance>")
